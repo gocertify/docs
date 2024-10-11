@@ -1,0 +1,82 @@
+---
+title: 'Integrate on-site'
+description: 'Start delighting shoppers with beautiful on-brand, on-site offers'
+---
+
+## Setup options
+
+Deploy gocertify by adding one line of code to the `<head>` of your site. 
+You can either do this using a tag manager (no developer required) or by manually adding the script yourself (basic knowledge of HTML recommended).
+The whole process can be completed within ~2 minutes.
+
+<VariableInput label="Enter your company name" name="companyName" />
+
+### Use a tag manager (no developer required)
+Tag managers let you can easily add gocertify to your site without needing a developer. Pick your prefered manager to see how it's done.
+
+<AccordionGroup>
+  <Accordion icon="tag" title="Google Tag Manager">
+  Watch our [tutorial video](tutorial.com) to see how it's done.
+
+  <Steps>
+    <Step title="Add a new tag">
+      Navigate to your Google Tag Manager (GTM) container and select `Add new Tag`
+    </Step>
+    <Step title="Choose Custom HTML configuration">
+      Within the tag configuration, select the `Custom HTML` option.
+    </Step>
+    <Step title="Paste in your gocertify script">
+      Copy and paste the script into the HTML tag. Remember to replace `exampleCompany` with your actual company name.
+      ```javascript gocertify-script
+        <script>
+          (function() {
+            var el = document.createElement('script');
+            el.setAttribute('src', 'https://assets.gocertify.me/assets/embed.js');
+            //replace exampleCompany with your company name
+            el.setAttribute('data-location', '/at/exampleCompany'); 
+            document.body.appendChild(el);
+          })();
+        </script>
+      ```
+    </Step>
+    <Step title="Trigger to fire on all pages">
+      Within `Triggers` configure the tag to fire on all pages.
+    </Step>
+    <Step title="Save and Publish">
+      Save your tag as `gocertify` and publish your container.
+    </Step>
+  </Steps>
+
+
+    
+  </Accordion>
+  <Accordion icon="network-wired" title="Awin Mastertag">
+    Watch our [tutorial video](tutorial.com) to see how it's done.
+
+    Previewing helps you make sure your changes look as intended. We built a
+    command line interface to render these changes locally. 1. Install the
+    [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the
+    documentation changes locally with this command: ``` npm i -g mintlify ```
+    2. Run the following command at the root of your documentation (where
+    `mint.json` is): ``` mintlify dev ```
+  </Accordion>
+</AccordionGroup>
+
+### Or Manually add script
+
+<AccordionGroup>
+
+<Accordion icon="rectangle-terminal" title="Add script to head">
+  Copy and paste the gocerty script into the `<head>` of your site. Remember to replace `exampleCompany` with your actual company name.
+  ```javascript gocertify-script
+    <script>
+      src="https://assets.gocertify.me/assets/embed.js" 
+      //replace exampleCompany with your company name
+      data-location="/at/exanpleCompany"
+    </script>
+
+  ```
+</Accordion>
+
+</AccordionGroup>
+
