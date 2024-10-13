@@ -1,97 +1,101 @@
 ---
 title: 'Add Landing Pages'
-description: 'Learn how to preview changes locally'
+description: 'Convert shoppers with custom, targeted landing pages'
 ---
 
-<Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
-</Info>
+Landing pages are a powerful tool for converting key communities and boosting your SEO. To get the most out of the gocertify experience we recommend you: 
 
-Step 1. Install Mintlify on your OS:
 
-<CodeGroup>
+  * **Create a landing page** for each of your high value campaigns (i.e. 20% off for Students) 
+  * **Integrate OfferHub** to showcase all your discounts in one place. 
 
-```bash npm
-npm i -g mintlify
-```
-
-```bash yarn
-yarn global add mintlify
-```
-
-</CodeGroup>
-
-Step 2. Go to the docs are located (where you can find `mint.json`) and run the following command:
-
-```bash
-mintlify dev
-```
-
-The documentation website is now available at `http://localhost:3000`.
-
-### Custom Ports
-
-Mintlify uses port 3000 by default. You can use the `--port` flag to customize the port Mintlify runs on. For example, use this command to run in port 3333:
-
-```bash
-mintlify dev --port 3333
-```
-
-You will see an error like this if you try to run Mintlify in a port that's already taken:
-
-```md
-Error: listen EADDRINUSE: address already in use :::3000
-```
-
-## Mintlify Versions
-
-Each CLI is linked to a specific version of Mintlify. Please update the CLI if your local website looks different than production.
-
-<CodeGroup>
-
-```bash npm
-npm i -g mintlify@latest
-```
-
-```bash yarn
-yarn global upgrade mintlify
-```
-
-</CodeGroup>
-
-## Deployment
-
+## Create Campaign landing pages
 <Tip>
-  Unlimited editors available under the [Pro
-  Plan](https://mintlify.com/pricing) and above.
+  Best practice is to create dedicated landing pages for your high-priority communities, like keyworkers and students.
 </Tip>
 
-You should see the following if the deploy successfully went through:
-
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
+<Expandable title="an example of a high performing campaign page">
+<Frame caption="LK Bennetts campaign pages have driven over 300% revenue growth YoY.">
+  <img
+    className="block dark:hidden"
+    src="/images/LKBennett-iFrame.png"
+    alt="Hero Light"
+  />
+  <img
+    className="hidden dark:block"
+    src="/images/LKBennett-iFrame.png"
+    alt="Hero Dark"
+  />
 </Frame>
+</Expandable>
 
-## Troubleshooting
+Adding a campaign specific landing page is simple, we recommend getting started with the following steps:
 
-Here's how to solve some common problems when working with the CLI.
+<Steps>
+  <Step title="Add a new page on-site">
+    Create a new page on your site for each campaign type you want to promote. 
+    Most brands reference the campaign type in the page url (i.e `company.com/students`) and add a simple title/description highlighting their offers.
+  </Step>
+  <Step title="Add iFrame to body">
+    <Tip>
+      Your gocertify account manager can provide you with the relevant iFrame code for each campaign.
+    </Tip>
 
-<AccordionGroup>
-  <Accordion title="Mintlify is not loading">
-    Update to Node v18. Run `mintlify install` and try again.
-  </Accordion>
-  <Accordion title="No such file or directory on Windows">
-Go to the `C:/Users/Username/.mintlify/` directory and remove the `mint`
-folder. Then Open the Git Bash in this location and run `git clone
-https://github.com/mintlify/mint.git`.
+    Once you have your basic page setup you can paste in the following iFrame within the `<body>` tag. This determines where gocertify reward flow will appear.
+    
+    ```html iFrame
+      <gocertify-iframe data-src="/at/exampleCompany/campaign"></gocertify-iframe>
+    ```
+    <Info>
+      Remember to replace `exampleCompany/campaign` with your actual company name and campaign name.
+    </Info>
+    
+  </Step>
 
-Repeat step 3.
+</Steps>
 
-  </Accordion>
-  <Accordion title="Getting an unknown error">
-    Try navigating to the root of your device and delete the ~/.mintlify folder.
-    Then run `mintlify dev` again.
-  </Accordion>
-</AccordionGroup>
 
-Curious about what changed in a CLI version? [Check out the CLI changelog.](/changelog/command-line)
+ 
+
+
+## Integrate OfferHub
+
+OfferHub is a centralised location for all your discounts and offers. It's a great way to showcase all your discounts in one place and drive traffic to your site.
+
+<Expandable title="an example of OfferHub">
+  <Frame caption="OfferHub is a powerful showcase of all your offers and discounts in one place. ">
+    <img
+      className="block dark:hidden"
+      src="/images/GoCertify-OfferHub.png"
+      alt="Hero Light"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/GoCertify-OfferHub.png"
+      alt="Hero Dark"
+    />
+  </Frame>
+</Expandable>
+
+To add OfferHub to your site, follow these steps:
+
+<Steps>
+  <Step title="Add a new page on-site">
+    Create a new page on your site to host your OfferHub, most brands use `company.com/offers` or `company.com/discounts`.
+  </Step>
+  <Step title="Add OfferHub iFrame to body">
+    <Tip>
+      Your gocertify account manager can provide you with the relevant iFrame code for each campaign.
+    </Tip>
+
+    Once you have your basic page setup you can paste in the following iFrame within the `<body>` tag. This determines where gocertify OfferHub will appear.
+    
+    ```html iFrame
+      <gocertify-iframe data-src="/at/exampleCompany/hub"></gocertify-iframe>
+    ```
+    <Info>
+      Remember to replace `exampleCompany` with your actual company name.
+    </Info>
+  </Step>
+
+</Steps>

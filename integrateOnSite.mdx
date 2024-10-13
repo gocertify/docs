@@ -5,28 +5,24 @@ description: 'Start delighting shoppers with beautiful on-brand, on-site offers'
 
 ## Setup options
 
-Deploy gocertify by adding one line of code to the `<head>` of your site. 
-You can either do this using a tag manager (no developer required) or by manually adding the script yourself (basic knowledge of HTML recommended).
-The whole process can be completed within ~2 minutes.
+Integrate gocertify by adding the gocertify script to your site's `<head>` using either a tag manager (no developer needed) or manually pasting it in (basic HTML knowledge recommended). The setup takes less than 2 minutes!
 
-<VariableInput label="Enter your company name" name="companyName" />
-
-### Use a tag manager (no developer required)
-Tag managers let you can easily add gocertify to your site without needing a developer. Pick your prefered manager to see how it's done.
+### Use a tag manager (no dev required)
+Tag managers let you can easily add the gocertify script site-wide without needing a developer. Pick your prefered manager to see how it's done.
 
 <AccordionGroup>
   <Accordion icon="tag" title="Google Tag Manager">
-  Watch our [tutorial video](tutorial.com) to see how it's done.
+  Watch our [tutorial video](tutorial.com) or follow these steps.
 
   <Steps>
     <Step title="Add a new tag">
-      Navigate to your Google Tag Manager (GTM) container and select `Add new Tag`
+      Navigate to your [Google Tag Manager](https://tagmanager.google.com/#/home) (GTM) account and select `Add new Tag`
     </Step>
-    <Step title="Choose Custom HTML configuration">
+    <Step title="Pick the Custom HTML configuration">
       Within the tag configuration, select the `Custom HTML` option.
     </Step>
     <Step title="Paste in your gocertify script">
-      Copy and paste the script into the HTML tag. Remember to replace `exampleCompany` with your actual company name.
+      Copy and paste the following script into the HTML tag. Remember to replace `exampleCompany` with your actual company name.
       ```javascript gocertify-script
         <script>
           (function() {
@@ -40,7 +36,11 @@ Tag managers let you can easily add gocertify to your site without needing a dev
       ```
     </Step>
     <Step title="Trigger to fire on all pages">
-      Within `Triggers` configure the tag to fire on all pages.
+      Within the `Triggers` options configure the tag to fire on all pages. 
+      <Info>
+        **Note**: The script is just 12kb and well optimised so it won't slow down your site.
+      </Info>
+
     </Step>
     <Step title="Save and Publish">
       Save your tag as `gocertify` and publish your container.
@@ -67,6 +67,7 @@ Tag managers let you can easily add gocertify to your site without needing a dev
 <AccordionGroup>
 
 <Accordion icon="rectangle-terminal" title="Add script to head">
+  
   Copy and paste the gocerty script into the `<head>` of your site. Remember to replace `exampleCompany` with your actual company name.
   ```javascript gocertify-script
     <script>
@@ -76,6 +77,9 @@ Tag managers let you can easily add gocertify to your site without needing a dev
     </script>
 
   ```
+  <Info>
+    **Note**: The script is just 12kb and well optimised so it won't slow down your site.
+  </Info>
 </Accordion>
 
 </AccordionGroup>

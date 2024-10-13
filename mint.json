@@ -58,14 +58,19 @@
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Customise Campaigns",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "customiseCampaigns/reusable-snippets"
+      ]
+    },
+    {
+      "group": "Promote your offers",
+      "pages": [
+        "promoteOffers/linking-to-offers",
+        "promoteOffers/on-site-placements",
+        "promoteOffers/offerHub",
+        "promoteOffers/images",
+        "promoteOffers/dataCapture"
       ]
     },
     {
