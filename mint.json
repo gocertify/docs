@@ -61,34 +61,41 @@
       "group": "Build Reward Flows",
       "pages": [
         "documentationSections/1_buildRewardFlows/overview",
-        "documentationSections/1_buildRewardFlows/rewards",
-        "documentationSections/1_buildRewardFlows/closedUserGroups",
-         "documentationSections/1_buildRewardFlows/customiseBranding"
+        "documentationSections/1_buildRewardFlows/customiseBranding",
+        "documentationSections/1_buildRewardFlows/chooseReward",
+        "documentationSections/1_buildRewardFlows/discounts",
+        "documentationSections/1_buildRewardFlows/giftCards",
+        "documentationSections/1_buildRewardFlows/gatedContent",
+        "documentationSections/1_buildRewardFlows/closedUserGroups"
       ]
     },
     {
       "group": "Capture Zero-Party Data",
       "pages": [
-        "documentationSections/captureData/overview",
-        "documentationSections/captureData/dataCapture",
-        "documentationSections/captureData/CDPintegrations"
+        "documentationSections/2_captureData/overview",
+        "documentationSections/2_captureData/dataCapture",
+        "documentationSections/2_captureData/customFields",
+        "documentationSections/2_captureData/CPPintegrationOverview",
+        "documentationSections/2_captureData/klayviyo"
       ]
     },
     {
       "group": "Promote across Channels",
       "pages": [
-        "documentationSections/promoteOffers/overview",
-        "documentationSections/promoteOffers/on-site-placements",
-        "documentationSections/promoteOffers/landingPages",
-        "documentationSections/promoteOffers/offerHub",
-        "documentationSections/promoteOffers/linking-to-offers",
-        "documentationSections/promoteOffers/inStore"
+        "documentationSections/3_promoteOffers/overview",
+        "documentationSections/3_promoteOffers/on-site-placements",
+        "documentationSections/3_promoteOffers/osmVisibility",
+        "documentationSections/3_promoteOffers/landingPages",
+        "documentationSections/3_promoteOffers/offerHub",
+        "documentationSections/3_promoteOffers/linking-to-offers",
+        "documentationSections/3_promoteOffers/popups",
+        "documentationSections/3_promoteOffers/inStore"
       ]
     },
     {
       "group": "Track Impact",
       "pages": [
-        "documentationSections/trackImpact/report"
+        "documentationSections/4_trackImpact/report"
       ]
     },
     {
