@@ -3,6 +3,10 @@ title: 'Add Landing Pages'
 description: 'Convert shoppers with custom, targeted landing pages'
 ---
 
+import OfferHubIntegrationSteps from '/snippets/offerHub-integration-steps.mdx';
+import LandingPageSteps from '/snippets/landing-page-integration-steps.mdx';
+
+
 Landing pages are a powerful tool for converting key communities and boosting your SEO. To get the most out of the gocertify experience we recommend you: 
 
 
@@ -31,29 +35,8 @@ Landing pages are a powerful tool for converting key communities and boosting yo
 
 Adding a campaign specific landing page is simple, we recommend getting started with the following steps:
 
-<Steps>
-  <Step title="Add a new page on-site">
-    Create a new page on your site for each campaign type you want to promote. 
-    Most brands reference the campaign type in the page url (i.e `company.com/students`) and add a simple title/description highlighting their offers.
-  </Step>
-  <Step title="Add iFrame to body">
-    <Tip>
-      Your gocertify account manager can provide you with the relevant iFrame code for each campaign.
-    </Tip>
 
-    Once you have your basic page setup you can paste in the following iFrame within the `<body>` tag. This determines where gocertify reward flow will appear.
-    
-    ```html iFrame
-      <gocertify-iframe data-src="/at/exampleCompany/campaign"></gocertify-iframe>
-    ```
-    <Info>
-      Remember to replace `exampleCompany/campaign` with your actual company name and campaign name.
-    </Info>
-    
-  </Step>
-
-</Steps>
-
+<LandingPageSteps />
 
  
 
@@ -79,23 +62,4 @@ OfferHub is a centralised location for all your discounts and offers. It's a gre
 
 To add OfferHub to your site, follow these steps:
 
-<Steps>
-  <Step title="Add a new page on-site">
-    Create a new page on your site to host your OfferHub, most brands use `company.com/offers` or `company.com/discounts`.
-  </Step>
-  <Step title="Add OfferHub iFrame to body">
-    <Tip>
-      Your gocertify account manager can provide you with the relevant iFrame code for each campaign.
-    </Tip>
-
-    Once you have your basic page setup you can paste in the following iFrame within the `<body>` tag. This determines where gocertify OfferHub will appear.
-    
-    ```html iFrame
-      <gocertify-iframe data-src="/at/exampleCompany/hub"></gocertify-iframe>
-    ```
-    <Info>
-      Remember to replace `exampleCompany` with your actual company name.
-    </Info>
-  </Step>
-
-</Steps>
+<OfferHubIntegrationSteps />
