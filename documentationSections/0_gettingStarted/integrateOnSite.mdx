@@ -3,11 +3,26 @@ title: 'Integrate on-site'
 description: 'Start delighting shoppers with beautiful on-brand, on-site offers'
 ---
 
+import LightweightScript from '/snippets/lightweight-script.mdx';
+
+
 ## Setup options
 
-Integrate gocertify by adding the gocertify script to your site's `<head>` using either a tag manager (no developer needed) or manually pasting it in (basic HTML knowledge recommended). The setup takes less than 2 minutes!
+Integrate gocertify by adding the gocertify <Tooltip tip="Our script is just 12kb and optimised for performance">script</Tooltip> to your site's `<head>` using either a tag manager (no developer needed) or manually pasting it in (basic HTML knowledge recommended). The setup takes less than 2 minutes!
 
-### Use a tag manager (no dev required)
+```javascript gocertify-script
+        <script>
+          (function() {
+            var gocertify = document.createElement('script');
+            gocertify.setAttribute('src', 'https://assets.gocertify.me/assets/embed.js');
+            //replace exampleCompany with your company name
+            gocertify.setAttribute('data-location', '/at/exampleCompany'); 
+            document.body.appendChild(gocertify);
+          })();
+        </script>
+      ```
+
+### Option 1: Use tag manager (no dev required)
 Tag managers let you can easily add the gocertify script site-wide without needing a developer. Pick your prefered manager to see how it's done.
 
 <AccordionGroup>
@@ -23,14 +38,15 @@ Tag managers let you can easily add the gocertify script site-wide without needi
     </Step>
     <Step title="Paste in your gocertify script">
       Copy and paste the following script into the HTML tag. Remember to replace `exampleCompany` with your actual company name.
+      
       ```javascript gocertify-script
         <script>
           (function() {
-            var el = document.createElement('script');
-            el.setAttribute('src', 'https://assets.gocertify.me/assets/embed.js');
+            var gocertify = document.createElement('script');
+            gocertify.setAttribute('src', 'https://assets.gocertify.me/assets/embed.js');
             //replace exampleCompany with your company name
-            el.setAttribute('data-location', '/at/exampleCompany'); 
-            document.body.appendChild(el);
+            gocertify.setAttribute('data-location', '/at/exampleCompany'); 
+            document.body.appendChild(gocertify);
           })();
         </script>
       ```
@@ -67,23 +83,26 @@ Tag managers let you can easily add the gocertify script site-wide without needi
   </Accordion>
 </AccordionGroup>
 
-### Or Manually add script
+### Option 2: Manually add script
 
 <AccordionGroup>
 
 <Accordion icon="rectangle-terminal" title="Add script to head">
   
-  Copy and paste the gocerty script into the `<head>` of your site. Remember to replace `exampleCompany` with your actual company name.
+  Copy and paste the gocertify script into the `<head>` of your site. Remember to replace `exampleCompany` with your actual company name.
   ```javascript gocertify-script
-    <script>
-      src="https://assets.gocertify.me/assets/embed.js" 
-      //replace exampleCompany with your company name
-      data-location="/at/exanpleCompany"
-    </script>
-
-  ```
+        <script>
+          (function() {
+            var gocertify = document.createElement('script');
+            gocertify.setAttribute('src', 'https://assets.gocertify.me/assets/embed.js');
+            //replace exampleCompany with your company name
+            gocertify.setAttribute('data-location', '/at/exampleCompany'); 
+            document.body.appendChild(gocertify);
+          })();
+        </script>
+      ```
   <Info>
-    **Note**: The script is just 12kb and well optimised so it won't slow down your site.
+    **Note**: If you cannot add the script to the `<head>` of your site you place it in the `<body>` .
   </Info>
 </Accordion>
 

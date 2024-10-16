@@ -76,7 +76,12 @@
         "documentationSections/2_captureData/dataCapture",
         "documentationSections/2_captureData/customFields",
         "documentationSections/2_captureData/CPPintegrationOverview",
-        "documentationSections/2_captureData/klayviyo"
+        "documentationSections/2_captureData/klayviyo",
+        "documentationSections/2_captureData/bloomreach",
+        "documentationSections/2_captureData/ometria",
+        "documentationSections/2_captureData/emarsys",
+        "documentationSections/2_captureData/dotdigital"
+
       ]
     },
     {
@@ -85,11 +90,15 @@
         "documentationSections/3_promoteOffers/overview",
         "documentationSections/3_promoteOffers/on-site-placements",
         "documentationSections/3_promoteOffers/osmVisibility",
+        "documentationSections/3_promoteOffers/dynamicText",
         "documentationSections/3_promoteOffers/landingPages",
         "documentationSections/3_promoteOffers/offerHub",
         "documentationSections/3_promoteOffers/linking-to-offers",
         "documentationSections/3_promoteOffers/popups",
-        "documentationSections/3_promoteOffers/inStore"
+        "documentationSections/3_promoteOffers/inStore",
+        "documentationSections/3_promoteOffers/osmPersonalisationIntegrations",
+        "documentationSections/3_promoteOffers/nosto",
+        "documentationSections/3_promoteOffers/bloomreach"
       ]
     },
     {
