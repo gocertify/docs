@@ -3,3 +3,36 @@ title: Dynamic Text
 description: 'Start building loyal communities with targeted, gated offers.'
 icon: 'fa-fw'
 ---
+
+
+With price etc you can do this now in google tag manager with variables (put it into the embed). Price = {{variable}}
+
+For shopify, CSM, Wordpress the variable is there
+
+—
+
+Manually - PHP variable
+
+
+- Create variable, data layer variable
+
+
+
+
+
+
+Support variables in both placements and head script but the variables should be in the head if possible.
+
+
+
+
+el.setAttribute('data-location', '/at/exampleCompany');
+
+
+el.setAttribute(‘price’, ‘{{variable}}’)
+
+Change el to gocertify?
+
+gocertify.setAttribute(…)
+
+

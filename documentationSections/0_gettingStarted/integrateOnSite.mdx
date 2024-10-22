@@ -1,14 +1,14 @@
 ---
 title: 'Integrate on-site'
-description: 'Start delighting shoppers with beautiful on-brand, on-site offers'
+description: 'Convert shoppers with targeted, gated offers.'
 ---
 
 import LightweightScript from '/snippets/lightweight-script.mdx';
 
 
-## Setup options
+## Setup
 
-Integrate gocertify by adding the gocertify <Tooltip tip="Our script is just 12kb and optimised for performance">script</Tooltip> to your site's `<head>` using either a tag manager (no developer needed) or manually pasting it in (basic HTML knowledge recommended). The setup takes less than 2 minutes!
+Integrate gocertify by adding the following gocertify <Tooltip tip="Our script is just 12kb and optimised for performance">script</Tooltip> to your site's `<head>` using either a tag manager (no developer needed) or manually pasting it in (basic HTML knowledge recommended). The setup takes less than 2 minutes!
 
 ```javascript gocertify-script
         <script>
@@ -27,7 +27,7 @@ Tag managers let you can easily add the gocertify script site-wide without needi
 
 <AccordionGroup>
   <Accordion icon="tag" title="Google Tag Manager">
-  Watch our [tutorial video](tutorial.com) or follow these steps.
+  Watch our [tutorial video](https://www.loom.com/share/c71c832b378e4e17b6aa80a6bcc284a7?sid=9604726f-f6e8-4997-bf66-9a11773773d2) or follow these steps.
 
   <Steps>
     <Step title="Add a new tag">
@@ -46,6 +46,7 @@ Tag managers let you can easily add the gocertify script site-wide without needi
             gocertify.setAttribute('src', 'https://assets.gocertify.me/assets/embed.js');
             //replace exampleCompany with your company name
             gocertify.setAttribute('data-location', '/at/exampleCompany'); 
+            gocertify.setAttribute('data-placement-lookup', 'true');
             document.body.appendChild(gocertify);
           })();
         </script>
@@ -67,17 +68,20 @@ Tag managers let you can easily add the gocertify script site-wide without needi
     
   </Accordion>
   <Accordion icon="network-wired" title="Awin Mastertag">
-    Watch our [tutorial video](tutorial.com) to see how it's done.
+    Watch our [tutorial video](https://www.loom.com/share/e13b1bc79c2545078fb46d4b78c8bb50?sid=46361597-a98e-4871-8f2d-7a24166e9c00) to see how it's done. 
 
     <Steps>
-      <Step title="Add the gocertify plugin">
-        Navigate to the Awin Plugin Store, search for gocertify and click `Add to Account`.
+      <Step title="Navigate to the plugin Store">
+        Select `Toolbox` from your main menu and then under `Links and Tools` select `Plugin Store`.
         <Frame>
           <img src="/images/awinFeatured.png" alt="Awin gocertfiy Plugin" />
         </Frame>
       </Step>
-      <Step title="One click activate">
-        Navigate to your Mastertag Toolbox, and activate the gocertify plugin.
+      <Step title="Activate Plugin">
+        Within the store search for the gocertify plugin and click `Activate now` and confirm your choice.
+      </Step>
+      <Step title="View your Plugins">
+        Once activated the final modal will give you the option to `View My Plugins`. Select this and you will see that the plugin is activated and the script has been deployed.
       </Step>
     </Steps>
   </Accordion>
