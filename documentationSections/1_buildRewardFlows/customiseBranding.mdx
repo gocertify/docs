@@ -3,28 +3,116 @@ title: 'Customise Branding'
 description: 'Convert shoppers with targeted, gated offers.'
 icon: 'paintbrush'
 ---
-Perhaps the most important part of your reward flow is the branding. This is the first thing your users will see, 
+A crucial part of your reward flow is its branding. This is the first thing your users will see, 
 and it's important to make sure that the shopper experience closely aligns with your brand guidelines.
 
-..image example of the various custom options our customers have chosen..
+In this chapter we will explore how how you can customise the visuals, copy and styling of your reward flow to make sure it's a perfect fit for your brand.
 
+
+<Frame caption = "Brands like VOXI and Sainsburys have strong visual identities. Our visual toolkit let them customise every detail of their flows, down the finest details (👀 check out the FAQ button UI)">
+    <img
+    className="block dark:hidden"
+    src="/images/customisationExample.png"
+    alt="Example Customisation Screens"
+    />
+    <img
+    className="hidden dark:block"
+    src="/images/customisationExample.png"
+    alt="Example Customisation Screens"
+    />
+</Frame>
 ## Customise your visuals
 
-**Brand Name**
+#### Favicon, Logo and Banner Image
+The brand logo and banner image is shown on the key screens throughout the reward flow and the favicon is shown on any 
+[go-certify hosted](https://secure.gocertify.me/at/gosnow) landing pages that you may link to. 
 
+Provide the image files, with the correct dimensions (listed below), to your gocertify account manager and we will handle the rest.
 
-**Favicon & logo**
-blah blah
+<Frame caption = "Ideal dimensions for your favicon are 36 x 36 px">
+<img
+    className="block dark:hidden"
+    src="/images/exampleFavicon.png"
+    alt="Example Favicon in Reward Flow"
+    />
+    <img
+    className="hidden dark:block"
+    src="/images/exampleFavicon.png"
+    alt="Example Favicon in Reward Flow"
+/>
+</Frame>
 
-**Banner image**
+<Frame caption = "Ideal dimensions for your banner are 1500 x 500 px - if you have a Twitter/X banner this size works perfectly">
+<img
+    className="block dark:hidden"
+    src="/images/exampleBanner.png"
+    alt="Example Banner in Reward Flow"
+    />
+    <img
+    className="hidden dark:block"
+    src="/images/exampleBanner.png"
+    alt="Example Banner in Reward Flow"
+/>
+</Frame>
 
-**Fonts**
+<Frame caption = "Ideal dimensions for your logo are any square logo, minimum width 500px">
+<img
+    className="block dark:hidden"
+    src="/images/logoExample.png"
+    alt="Example Logo in Reward Flow"
+    />
+    <img
+    className="hidden dark:block"
+    src="/images/logoExample.png"
+    alt="Example Logo in Reward Flow"
+/>
+</Frame>
 
-**Colors**
+#### Fonts
+Provide up to 4 font files to customise the heading, normal, tagline and fineprint text.
 
-**Custom Styling**
-Advanced CSS
-- list the items you can refer to.
+<Frame caption = "Font files will be applied to the following sections of the flow">
+<img
+    className="block dark:hidden"
+    src="/images/exampleFonts.png"
+    alt="Example Font in Reward Flow"
+    />
+    <img
+    className="hidden dark:block"
+    src="/images/exampleFonts.png"
+    alt="Example Font in Reward Flow"
+/>
+</Frame>
+
+#### Custom Styling
+The Advanced CSS option let's you can go even further with your customisation. The most popular customisations are captured below, or refer to the [Advanced CSS](/documentationSections/1_buildRewardFlows/advanceCSS.mdx) section for more details.
+
+<AccordionGroup>
+  <Accordion title="Hide iFrame Brand Logo" icon="square-minus">
+    ```css
+    .in-iframe .logo-block-pushed-up {
+      display: none;
+    }
+
+    .in-iframe .logo-block {
+      display: none;
+    }
+    ```
+  </Accordion>
+
+  <Accordion title="Hide iFrame Banner Image" icon="panorama">
+    ```css
+    .in-iframe.student-youth .banner-section a {
+    display: none;
+    }
+
+    .in-iframe .banner-section .header-image {
+    visibility: hidden;
+    height: 50px;
+    }
+    ```
+  </Accordion>
+</AccordionGroup>
 
 ## Customise your messaging
 - List the different type of copy 
