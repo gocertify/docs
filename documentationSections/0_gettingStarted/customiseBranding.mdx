@@ -4,9 +4,10 @@ description: 'Convert shoppers with targeted, gated offers.'
 icon: 'paintbrush'
 ---
 A crucial part of your reward flow is its branding. This is the first thing your users will see, 
-and it's important to make sure that the shopper experience closely aligns with your brand guidelines.
+and it's important to make sure that the shopper experience closely aligns with your brand guidelines. 
 
-In this chapter we will explore how how you can customise the visuals, copy and styling of your reward flow to make sure it's a perfect fit for your brand.
+In this section we will explore how how you can customise the visuals, copy and styling of your reward flow to make sure it's a perfect fit for your brand. The branding you 
+create will be applied to all of your reward flows, so it's a great way to build consistency across your campaigns.
 
 
 <Frame caption = "Brands like VOXI and Sainsburys have strong visual identities. Our visual toolkit let them customise every detail of their flows, down the finest details (👀 check out the FAQ button UI)">
@@ -69,7 +70,7 @@ Provide the image files, with the correct dimensions (listed below), to your goc
 </Frame>
 
 #### Fonts
-Provide up to 4 font files to customise the heading, normal, tagline and fineprint text.
+You can provide up to 4 font files to customise the heading, normal, tagline and fineprint text. These fonts will be applied throughout the reward flow as detailed below:
 
 <Frame caption = "Font files will be applied to the following sections of the flow">
 <img
@@ -93,27 +94,43 @@ The Advanced CSS option let's you can go even further with your customisation. T
     .in-iframe .logo-block-pushed-up {
       display: none;
     }
-
-    .in-iframe .logo-block {
-      display: none;
-    }
     ```
   </Accordion>
 
   <Accordion title="Hide iFrame Banner Image" icon="panorama">
     ```css
-    .in-iframe.student-youth .banner-section a {
+    .in-iframe .banner-section a {
     display: none;
     }
 
-    .in-iframe .banner-section .header-image {
-    visibility: hidden;
-    height: 50px;
-    }
     ```
+  </Accordion>
+
+
+  <Accordion title="Customise fonts" icon="t">
+    <CodeGroup>
+    ```css headings
+        /* Applies styles to the heading text. */
+        .heading {
+        text-transform: uppercase;
+        font-weight: 700; 
+        font-style: normal; 
+        font-size: 28px; 
+        color: rgb(0, 0, 0); 
+        }
+    ```
+    ```css paragraph
+        /* Applies styles to the subtitle text. */
+        .paragraph {
+        font-family: "Roboto Condensed", sans-serif !important;
+        font-weight: 400; 
+        font-style: normal; 
+        font-size: 16px; 
+        color: rgb(0, 0, 0); 
+        }
+
+    ```
+    </CodeGroup>
   </Accordion>
 </AccordionGroup>
 
-## Customise your messaging
-- List the different type of copy 
-Maybe put placements as a link

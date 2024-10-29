@@ -33,35 +33,36 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "Platform",
+      "icon": "house",
+      "url": "https://secure.gocertify.me/dashboard"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "Playbooks",
+      "icon": "book-open",
+      "url": "https://www.gocertify.me/playbooks?tag=Channel"
     },
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://www.gocertify.me/"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
       "pages": [
-        "documentationSections/0_gettingStarted/introduction",
+        "documentationSections/0_gettingStarted/overview",
+        "documentationSections/0_gettingStarted/quickStart",
         "documentationSections/0_gettingStarted/integrateOnSite",
-        "documentationSections/0_gettingStarted/landingPages"
+        "documentationSections/0_gettingStarted/landingPages",
+        "documentationSections/0_gettingStarted/customiseBranding"
       ]
     },
     {
-      "group": "Build Reward Flows",
+      "group": "Create Campaigns",
       "pages": [
         "documentationSections/1_buildRewardFlows/overview",
-        "documentationSections/1_buildRewardFlows/customiseBranding",
         "documentationSections/1_buildRewardFlows/chooseReward",
         "documentationSections/1_buildRewardFlows/discounts",
         "documentationSections/1_buildRewardFlows/giftCards",
@@ -123,8 +124,6 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
+    "linkedin": "https://linkedin.com/company/gocertifyme"
   }
 }
