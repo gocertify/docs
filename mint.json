@@ -5,6 +5,9 @@
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
+  "modeToggle": {
+    "default": "light"
+  },
   "favicon": "/favicon.svg",
   "colors": {
     "primary": "#0D9373",
@@ -67,6 +70,7 @@
         "documentationSections/1_buildRewardFlows/discounts",
         "documentationSections/1_buildRewardFlows/giftCards",
         "documentationSections/1_buildRewardFlows/gatedContent",
+        "documentationSections/1_buildRewardFlows/customiseCopy",
         "documentationSections/1_buildRewardFlows/closedUserGroups"
       ]
     },
