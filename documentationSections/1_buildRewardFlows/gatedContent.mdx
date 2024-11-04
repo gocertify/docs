@@ -15,7 +15,7 @@ One initial validation we can do is add an extra parameter to this url, called s
 
 This signature will be a JWT (using a custom **API key** and a “**HS256**“ cryptographic algorithm) of the whole query string. Using the previous url (the one with subid, token and group), the string that would be signed would be:
 
-**`subid**=234790**&token**=asdc1234**&group**=student`
+`**subid**=234790**&token**=asdc1234**&group**=student`
 
 So we will add the resulting hash as the signature, like this:
 
