@@ -14,11 +14,9 @@ Integrate gocertify by adding the following gocertify <Tooltip tip="Our script i
 ```javascript gocertify-script
         <script>
           (function() {
-            var el = document.createElement('script');
-            el.setAttribute('src', 'https://assets.gocertify.me/assets/embed.js');
-            //replace exampleCompany with your company name
-            el.setAttribute('data-location', '/at/exampleCompany'); 
-            el.setAttribute('data-placement-lookup', 'true');
+            var el = document.createElement("script");
+            el.setAttribute("src", "https://assets.gocertify.me/assets/gocertify.js");
+            el.setAttribute("data-brand", "example-company"); //replace example-company with your company name
             document.body.appendChild(el);
           })();
         </script>
@@ -39,23 +37,21 @@ Tag managers let you can easily add the gocertify script site-wide without needi
       Within the tag configuration, select the `Custom HTML` option.
     </Step>
     <Step title="Paste in your gocertify script">
-      Copy and paste the following script into the HTML tag. Remember to replace `exampleCompany` with your actual company name.
-      
+      Copy and paste the following script into the HTML tag. Remember to replace `example-company` with your actual company name.
+
       ```javascript gocertify-script
         <script>
           (function() {
-            var gocertify = document.createElement('script');
-            gocertify.setAttribute('src', 'https://assets.gocertify.me/assets/embed.js');
-            //replace exampleCompany with your company name
-            gocertify.setAttribute('data-location', '/at/exampleCompany'); 
-            gocertify.setAttribute('data-placement-lookup', 'true');
-            document.body.appendChild(gocertify);
+            var el = document.createElement("script");
+            el.setAttribute("src", "https://assets.gocertify.me/assets/gocertify.js");
+            el.setAttribute("data-brand", "example-company"); //replace example-company with your company name
+            document.body.appendChild(el);
           })();
         </script>
       ```
     </Step>
     <Step title="Trigger to fire on all pages">
-      Within the `Triggers` options configure the tag to fire on all pages. 
+      Within the `Triggers` options configure the tag to fire on all pages.
       <Info>
         **Note**: The script is just 12kb and well optimised so it won't slow down your site.
       </Info>
@@ -67,10 +63,10 @@ Tag managers let you can easily add the gocertify script site-wide without needi
   </Steps>
 
 
-    
+
   </Accordion>
   <Accordion icon="network-wired" title="Awin Mastertag">
-    Watch our [tutorial video](https://www.loom.com/share/e13b1bc79c2545078fb46d4b78c8bb50?sid=46361597-a98e-4871-8f2d-7a24166e9c00) to see how it's done. 
+    Watch our [tutorial video](https://www.loom.com/share/e13b1bc79c2545078fb46d4b78c8bb50?sid=46361597-a98e-4871-8f2d-7a24166e9c00) to see how it's done.
 
     <Steps>
       <Step title="Navigate to the plugin Store">
@@ -94,16 +90,15 @@ Tag managers let you can easily add the gocertify script site-wide without needi
 <AccordionGroup>
 
 <Accordion icon="rectangle-terminal" title="Add script to head">
-  
-  Copy and paste the gocertify script into the `<head>` of your site. Remember to replace `exampleCompany` with your actual company name.
+
+  Copy and paste the gocertify script into the `<head>` of your site. Remember to replace `example-company` with your actual company name.
   ```javascript gocertify-script
         <script>
           (function() {
-            var gocertify = document.createElement('script');
-            gocertify.setAttribute('src', 'https://assets.gocertify.me/assets/embed.js');
-            //replace exampleCompany with your company name
-            gocertify.setAttribute('data-location', '/at/exampleCompany'); 
-            document.body.appendChild(gocertify);
+            var el = document.createElement("script");
+            el.setAttribute("src", "https://assets.gocertify.me/assets/gocertify.js");
+            el.setAttribute("data-brand", "example-company"); //replace example-company with your company name
+            document.body.appendChild(el);
           })();
         </script>
       ```
@@ -113,4 +108,3 @@ Tag managers let you can easily add the gocertify script site-wide without needi
 </Accordion>
 
 </AccordionGroup>
-
