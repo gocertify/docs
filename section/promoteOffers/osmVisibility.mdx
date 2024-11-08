@@ -4,6 +4,59 @@ description: 'Start building loyal communities with targeted, gated offers.'
 icon: 'fa-fw'
 ---
 
+The OSM visibility toolkit lets you control exactly when and where your offers are displayed to shoppers. There are four fundamental types of visibility rules. 
 
-my_oms_test=true and OSM rule so you can show it by adding that path (or staging etc). 
-Everything after the domain (i.e. starts after https://secure.gocertify.me/) is used to determine the visibility of the offer.
+
+<AccordionGroup>
+  <Accordion title="Path" icon="link">
+   Input plain text to match the path (https://secure.gocertify.me/ `this/is/the/path`) you want to show/hide the OSM. Use regex for more complex rules.
+   <Frame>
+   <img src="/images/visibility-rule-path.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
+   </Frame>
+  </Accordion>
+  <Accordion title="Date" icon="calendar-days">
+  Select a start and end date for when the offer should be displayed.
+   <Frame>
+   <img src="/images/visibility-rule-date.png" alt="Date rule" width="50%" style={{ borderRadius: '0.5rem' }} />
+   </Frame>
+  </Accordion>
+  <Accordion title="Time" icon="clock">
+  Select a start and end time for when the offer should be displayed. This will be recurring on every day of the week.
+  <Frame    >
+  <img src="/images/visibility-rule-time.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
+  </Frame>
+  </Accordion>
+  <Accordion title="Price" icon="money-check-dollar">
+  Select a minimum/maximum/exact price for when the offer should be displayed.
+  <Frame    >
+  <img src="/images/visibility-rule-price.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
+  </Frame>
+  </Accordion>
+  <Accordion title="Dwell Time" icon="unlock-keyhole">
+  Displayed the offer based on how long the shopper has spent on the page.
+  <Frame>   
+  <img src="/images/visibility-rule-dwell-time.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
+  </Frame>
+  </Accordion>
+</AccordionGroup>
+
+
+## Popular Visibility Rule Use Cases
+You can add multiple rules to a placement to combine these rules to match your campaign objectives. All rules need to be met for the offer to be displayed.
+
+<img src="/images/visibility-rule.png" alt="Setting visibility rules" style={{ borderRadius: '0.5rem' }} />
+
+
+<AccordionGroup>
+  <Accordion title="Only show on staging" icon="hammer">
+    Set a path rule for `path` `contains` `?my_oms_test=true`. Manually add this query to the end of the URL in staging
+  </Accordion>
+  <Accordion title="Only show on certain Products" icon="rectangle-list">
+  Create a path rule for `path` `contains` `category/product`. Placement will only show when for items within that category.
+  </Accordion>
+  <Accordion title="Don't show on sale items" icon="clipboard-list">
+  Create a path rule for `path` `does not contain` `sale` or `discount`.
+  
+  Alternatively leverage the CSS selector to anchor inline placements to an element that only shows on non-sale products.
+  </Accordion>
+</AccordionGroup>

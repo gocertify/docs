@@ -92,29 +92,13 @@
         "section/promoteOffers/linking-to-offers",
         "section/promoteOffers/popups",
         "section/promoteOffers/inStore",
-        "section/promoteOffers/osmPersonalisationIntegrations",
-        "section/promoteOffers/nosto",
-        "section/promoteOffers/bloomreach"
+        "section/promoteOffers/osmPersonalisationIntegrations"
       ]
     },
     {
       "group": "Track Impact",
       "pages": [
         "section/trackImpact/report"
-      ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
       ]
     }
   ],

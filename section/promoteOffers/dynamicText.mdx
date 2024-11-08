@@ -4,8 +4,14 @@ description: 'Start building loyal communities with targeted, gated offers.'
 icon: 'fa-fw'
 ---
 
+Dynamic text allows you to display dynamic variables in your on site messages. This is especially powerful when used to display the exact saving amount shoppers will receive for a given product item.
 
-With price etc you can do this now in google tag manager with variables (put it into the embed). Price = {{variable}}
+
+<img src="/images/OSM.png" alt="Dynamic Text" style={{ borderRadius: '0.5rem' }} />
+
+
+
+With price etc you can do this now in google tag manager with variables (put it into the embed). `Price = {{variable}}`
 
 For shopify, CSM, Wordpress the variable is there
 
@@ -21,18 +27,7 @@ Manually - PHP variable
 
 
 
-Support variables in both placements and head script but the variables should be in the head if possible.
 
-
-
-
-el.setAttribute('data-location', '/at/exampleCompany');
-
-
-el.setAttribute(‘price’, ‘{{variable}}’)
-
-Change el to gocertify?
-
-gocertify.setAttribute(…)
+`el.setAttribute(‘price’, ‘{{variable}}’)`
 
 
