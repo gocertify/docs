@@ -55,56 +55,56 @@
     {
       "group": "Get Started",
       "pages": [
-        "documentationSections/0_gettingStarted/overview",
-        "documentationSections/0_gettingStarted/quickStart",
-        "documentationSections/0_gettingStarted/integrateOnSite",
-        "documentationSections/0_gettingStarted/landingPages",
-        "documentationSections/0_gettingStarted/customiseBranding"
+        "section/gettingStarted/overview",
+        "section/gettingStarted/quickStart",
+        "section/gettingStarted/integrateOnSite",
+        "section/gettingStarted/landingPages",
+        "section/gettingStarted/customiseBranding"
       ]
     },
     {
       "group": "Create Campaigns",
       "pages": [
-        "documentationSections/1_buildRewardFlows/overview",
-        "documentationSections/1_buildRewardFlows/chooseReward",
-        "documentationSections/1_buildRewardFlows/discounts",
-        "documentationSections/1_buildRewardFlows/giftCards",
-        "documentationSections/1_buildRewardFlows/gatedContent",
-        "documentationSections/1_buildRewardFlows/customiseCopy",
-        "documentationSections/1_buildRewardFlows/closedUserGroups"
+        "section/buildRewardFlows/overview",
+        "section/buildRewardFlows/chooseReward",
+        "section/buildRewardFlows/discounts",
+        "section/buildRewardFlows/giftCards",
+        "section/buildRewardFlows/gatedContent",
+        "section/buildRewardFlows/customiseCopy",
+        "section/buildRewardFlows/closedUserGroups"
       ]
     },
     {
       "group": "Capture Zero-Party Data",
       "pages": [
-        "documentationSections/2_captureData/overview",
-        "documentationSections/2_captureData/dataCapture",
-        "documentationSections/2_captureData/customFields",
-        "documentationSections/2_captureData/CDPintegrationOverview"
+        "section/captureData/overview",
+        "section/captureData/dataCapture",
+        "section/captureData/customFields",
+        "section/captureData/CDPintegrationOverview"
 
       ]
     },
     {
       "group": "Promote across Channels",
       "pages": [
-        "documentationSections/3_promoteOffers/overview",
-        "documentationSections/3_promoteOffers/on-site-placements",
-        "documentationSections/3_promoteOffers/osmVisibility",
-        "documentationSections/3_promoteOffers/dynamicText",
-        "documentationSections/3_promoteOffers/landingPages",
-        "documentationSections/3_promoteOffers/offerHub",
-        "documentationSections/3_promoteOffers/linking-to-offers",
-        "documentationSections/3_promoteOffers/popups",
-        "documentationSections/3_promoteOffers/inStore",
-        "documentationSections/3_promoteOffers/osmPersonalisationIntegrations",
-        "documentationSections/3_promoteOffers/nosto",
-        "documentationSections/3_promoteOffers/bloomreach"
+        "section/promoteOffers/overview",
+        "section/promoteOffers/on-site-placements",
+        "section/promoteOffers/osmVisibility",
+        "section/promoteOffers/dynamicText",
+        "section/promoteOffers/landingPages",
+        "section/promoteOffers/offerHub",
+        "section/promoteOffers/linking-to-offers",
+        "section/promoteOffers/popups",
+        "section/promoteOffers/inStore",
+        "section/promoteOffers/osmPersonalisationIntegrations",
+        "section/promoteOffers/nosto",
+        "section/promoteOffers/bloomreach"
       ]
     },
     {
       "group": "Track Impact",
       "pages": [
-        "documentationSections/4_trackImpact/report"
+        "section/trackImpact/report"
       ]
     },
     {
