@@ -7,7 +7,7 @@ icon: "wand-magic-sparkles"
 import LightweightScript from '/snippets/lightweight-script.mdx';
 
 
-## 🛠️ Setup
+## Setup
 
 Integrate gocertify by adding the following gocertify <Tooltip tip="Our script is just 12kb and optimised for performance">script</Tooltip> to your site's `<head>` using either a tag manager (no developer needed) or manually pasting it in (basic HTML knowledge recommended). The setup takes less than 2 minutes!
 
@@ -17,6 +17,7 @@ Integrate gocertify by adding the following gocertify <Tooltip tip="Our script i
             var el = document.createElement("script");
             el.setAttribute("src", "https://assets.gocertify.me/assets/gocertify.js");
             el.setAttribute("data-brand", "example-company"); //replace example-company with your company name
+            el.setAttribute("defer", "true");
             document.body.appendChild(el);
           })();
         </script>
@@ -98,6 +99,7 @@ Tag managers let you can easily add the gocertify script site-wide without needi
             var el = document.createElement("script");
             el.setAttribute("src", "https://assets.gocertify.me/assets/gocertify.js");
             el.setAttribute("data-brand", "example-company"); //replace example-company with your company name
+            el.setAttribute("defer", "true");
             document.body.appendChild(el);
           })();
         </script>

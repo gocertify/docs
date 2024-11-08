@@ -80,12 +80,7 @@
         "documentationSections/2_captureData/overview",
         "documentationSections/2_captureData/dataCapture",
         "documentationSections/2_captureData/customFields",
-        "documentationSections/2_captureData/CPPintegrationOverview",
-        "documentationSections/2_captureData/klayviyo",
-        "documentationSections/2_captureData/bloomreach",
-        "documentationSections/2_captureData/ometria",
-        "documentationSections/2_captureData/emarsys",
-        "documentationSections/2_captureData/dotdigital"
+        "documentationSections/2_captureData/CDPintegrationOverview"
 
       ]
     },
