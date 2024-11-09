@@ -4,10 +4,25 @@ description: 'Start building loyal communities with targeted, gated offers.'
 icon: 'window-restore'
 ---
 
+Popups are a great way to keep shoppers in-flow, letting them verify and collect rewards without leaving the page they're browsing.
+To set up a popup simple add an onclick event to your given CTA, button or link and call the gocertify.popup function.
 
+
+<CodeGroup>
+```javascript Campaign Popup
 gocertify.popup("student-youth")
-gocertify.popup("student-youth?clickref=...") lets you redirect to a specific page (false stops the main link working )
-
-
-
+```
+```javascript Campaign Popup with clickref
+//redirect to a specific page post verification
+gocertify.popup("student-youth?clickref=...") 
+```
+```html Link with onclick event
 <a href="#" onclick="gocertify.popup('/at/tower-london/student-grad'); return false;">click here</a>
+```
+</CodeGroup>
+
+
+
+<Card title="Popups" img="/images/OSM-popUp.png">
+     Deploy a CTA that initiates the verification flow from high traffic areas of your site.
+</Card>

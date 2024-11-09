@@ -1,66 +1,45 @@
 ---
 title: 'Landing Pages'
-description: 'The navigation field in mint.json defines the pages that go in the navigation menu'
+description: 'Start building loyal communities with targeted, gated offers.'
 icon: 'map'
 ---
 
-The navigation menu is the list of links on every website.
+import LandingPageSteps from '/snippets/landing-page-integration-steps.mdx';
 
-You will likely update `mint.json` every time you add a new page. Pages do not show up automatically.
 
-## Navigation syntax
+Landing pages are a powerful tool for converting key communities and boosting your SEO. To get the most out of the gocertify experience we recommend you: 
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
 
-<CodeGroup>
+  * **Create a landing page** for each of your high value campaigns (i.e. 20% off for Students) 
+  * **Create multi-offers page** to showcase all your discounts in one place. 
 
-```json Regular Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": ["quickstart"]
-    }
-]
-```
+## Create Campaign landing pages
+<Tip>
+  Best practice is to create dedicated landing pages for your high-priority communities, like Key Workers and Students.
 
-```json Nested Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": [
-            "quickstart",
-            {
-                "group": "Nested Reference Pages",
-                "pages": ["nested-reference-page"]
-            }
-        ]
-    }
-]
-```
+  To increase SEO traffic ensure that the group name and “discount” is mentioned.
 
-</CodeGroup>
+  - **Meta title and H1:** _company_ student discount
+  - **Meta description:** We know that a little help goes a long way when you're a student. Verify your student status and you can get 10% off.
 
-## Folders
+</Tip>
 
-Simply put your MDX files in folders and update the paths in `mint.json`.
+<Frame caption="LK Bennetts campaign pages drive evergreen revenue growth YoY.">
+  <img
+    className="block dark:hidden"
+    src="/images/LKBennett-iFrame.png"
+    alt="Hero Light"
+  />
+  <img
+    className="hidden dark:block"
+    src="/images/LKBennett-iFrame.png"
+    alt="Hero Dark"
+  />
+</Frame>
 
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
+Adding a campaign specific landing page is simple, we recommend getting started with the following steps:
 
-<Warning>
 
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
+<LandingPageSteps />
 
-</Warning>
-
-```json Navigation With Folder
-"navigation": [
-    {
-        "group": "Group Name",
-        "pages": ["your-folder/your-page"]
-    }
-]
-```
-
-## Hidden Pages
-
-MDX files not included in `mint.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+ 

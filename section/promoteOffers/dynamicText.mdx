@@ -1,26 +1,57 @@
 ---
-title: Dynamic Text
+title: Dynamic CTAs
 description: 'Start building loyal communities with targeted, gated offers.'
 icon: 'fa-fw'
 ---
 
-Dynamic text allows you to display dynamic variables in your on site messages. This is especially powerful when used to display the exact saving amount shoppers will receive for a given product item.
+gocertify makes it easy to display dynamic variables in your on site messages. This is especially powerful when used to display the exact saving amount shoppers will receive for a given product item, driving higher conversion rates.
 
 
 <img src="/images/OSM.png" alt="Dynamic Text" style={{ borderRadius: '0.5rem' }} />
 
+To pass through a variable to your on site message you can use the add one extra line to your [head script](/section/gettingStarted/integrateOnSite): `el.setAttribute('price', '{{variable}}')`. The variable has to match the key of the product attribute you want to display and will be replaced with the actual value when the message is displayed.
+If the attribute with the key you specify does not exist, the variable will not display.
 
+Many integrations have built in support for dynamic variables, for instructions expand the relevant section below:
 
-With price etc you can do this now in google tag manager with variables (put it into the embed). `Price = {{variable}}`
-
+<AccordionGroup>
+<Accordion title="Google Tag Manager" icon="tag">
+Google tag manager supports dynamic variables that are tightly integrated with the data layer.
+<Steps> 
+<Step title="Identify Variable Name">
+Navigate to the variable tab in [tag manager](https://tagmanager.google.com/#) and identify/create the variable that contains product price and note the name.
+To use the variable you'll need to replace the spaces with underscores so `Product Price` would be `product_price`.
+<img src="/images/GTM-variables.png" alt="GTM Variables" style={{ borderRadius: '0.5rem' }} />
+</Step>
+<Step title="Add New Line to Head Script">
+Navigate back to the gocertify head script within the tags section and add a new line using the format `el.setAttribute('price', '{{variable_name}}');` and the variable name you noted in the previous step.
+<img src="/images/GTM-tag-variable.png" alt="GTM Head Script" style={{ borderRadius: '0.5rem' }} />
+</Step>
+<Step title="Save and Publish">
+Save and publish your changes. You should now see dynamic text in your on site messages.
+<img src="/images/GTM-publish.png" alt="GTM Publish" style={{ borderRadius: '0.5rem' }} />
+</Step>
+</Steps>
+</Accordion>
+<Accordion title="Shopify" icon="shopify">
 For shopify, CSM, Wordpress the variable is there
+</Accordion>
+<Accordion title="Manually added Head Script" icon="code">
+<CodeGroup>
 
-—
+```PHP PHP
+el.setAttribute('price', '{{variable}}')
+```
 
-Manually - PHP variable
+```Ruby Ruby
+el.setAttribute('price', '{{variable}}')
+```
+
+</CodeGroup>
+</Accordion>
+</AccordionGroup>
 
 
-- Create variable, data layer variable
 
 
 
@@ -28,6 +59,5 @@ Manually - PHP variable
 
 
 
-`el.setAttribute(‘price’, ‘{{variable}}’)`
 
 

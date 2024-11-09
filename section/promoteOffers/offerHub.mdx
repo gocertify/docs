@@ -1,66 +1,33 @@
 ---
 title: 'OfferHub'
-description: 'The navigation field in mint.json defines the pages that go in the navigation menu'
+description: 'Start building loyal communities with targeted, gated offers.'
 icon: 'clipboard-list'
 ---
+import OfferHubIntegrationSteps from '/snippets/offerHub-integration-steps.mdx';
 
-The navigation menu is the list of links on every website.
+OfferHub is a centralised location for all your discounts and offers. It's a great way to showcase all your discounts in one place and drive traffic to your site.
 
-You will likely update `mint.json` every time you add a new page. Pages do not show up automatically.
+<Tip>
+  Best practice is to create a dedicated multi-offers page to showcase all your discounts in one place. To increase SEO traffic ensure the terms “discount codes”, “offers” and “coupon” (if wanting to rank in the the USA) are mentioned:
 
-## Navigation syntax
+  - **Meta title and H1:** Official {company} Discount Codes and Offers
+  - **Meta description:** Did you just search for a _company_ discount code? That's an intelligent move - you're obviously a savvy shopper. This is the official discount code page for _company_ and you won't find a better discount elsewhere.
+</Tip>
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
+  <Frame caption="OfferHub is a powerful showcase of all your offers and discounts in one place. ">
+    <img
+      className="block dark:hidden"
+      src="/images/GoCertify-OfferHub.png"
+      alt="Hero Light"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/GoCertify-OfferHub.png"
+      alt="Hero Dark"
+    />
+  </Frame>
 
-<CodeGroup>
+To add OfferHub to your site, follow these steps:
 
-```json Regular Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": ["quickstart"]
-    }
-]
-```
+<OfferHubIntegrationSteps />
 
-```json Nested Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": [
-            "quickstart",
-            {
-                "group": "Nested Reference Pages",
-                "pages": ["nested-reference-page"]
-            }
-        ]
-    }
-]
-```
-
-</CodeGroup>
-
-## Folders
-
-Simply put your MDX files in folders and update the paths in `mint.json`.
-
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
-
-<Warning>
-
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
-
-</Warning>
-
-```json Navigation With Folder
-"navigation": [
-    {
-        "group": "Group Name",
-        "pages": ["your-folder/your-page"]
-    }
-]
-```
-
-## Hidden Pages
-
-MDX files not included in `mint.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
