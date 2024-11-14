@@ -33,9 +33,6 @@ Save and publish your changes. You should now see dynamic text in your on site m
 </Step>
 </Steps>
 </Accordion>
-<Accordion title="Shopify" icon="shopify">
-For shopify, CSM, Wordpress the variable is there
-</Accordion>
 <Accordion title="Manually added Head Script" icon="code">
 <CodeGroup>
 
@@ -49,6 +46,21 @@ el.setAttribute('price', '{{variable}}')
 
 </CodeGroup>
 </Accordion>
+
+<Accordion title="Via inline placement" icon="sign-hanging">
+<CodeGroup>
+
+```PHP PHP
+el.setAttribute('price', '{{variable}}')
+```
+
+```Ruby Ruby
+el.setAttribute('price', '{{variable}}')
+```
+
+</CodeGroup>
+</Accordion>
+
 </AccordionGroup>
 
 
