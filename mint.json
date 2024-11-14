@@ -75,6 +75,8 @@
       "pages": [
         "section/captureData/overview",
         "section/captureData/customFields",
+        "section/captureData/csvExport",
+        "section/captureData/webhooksZapier",
         "section/captureData/CDPintegrationOverview"
 
       ]

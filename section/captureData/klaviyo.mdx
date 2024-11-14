@@ -4,3 +4,115 @@ description: 'Start building loyal communities with targeted, gated offers.'
 icon: 'fa-fw'
 ---
 
+When a shopper submits their email and/or mobile number, gocertify will send this data to the customer's Klaviyo account. This is represented by a “Profile” (that could previously exist).
+
+As the shopper goes on to successfully verify as a target group (student, healthcare, senior, etc) another “Event” will be triggered, with the label “verified as __”. 
+
+With this data, you will be able to generate segments based on these events.
+
+## Requirements to go live
+
+In order to go live with Klaviyo, we will need the following:
+
+- Private Klaviyo API Key
+- Main Klaviyo lists for Email and SMS
+
+### Private Klaviyo API Key
+Please share a Private Klaviyo API Key must be generated and provided to the gocertify team. [See here how to generate one](https://help.klaviyo.com/hc/en-us/articles/7423954176283#before-you-begin1).
+
+This API Key must be a “Custom” one, giving “Full Access” to Events, List, Profiles and Subscriptions, as shown here.
+
+<Frame caption="Klaviyo API Key Permissions">
+<img
+  className="block dark:hidden"
+  src="/images/klaviyoAPI.png"
+  alt="Hero Light"
+  style={{ borderRadius: '0.5rem' }}
+/>
+<img
+  className="hidden dark:block"
+  src="/images/klaviyoAPI.png"
+  alt="Hero Dark"
+  style={{ borderRadius: '0.5rem' }}
+/>
+</Frame>
+
+### Main Klaviyo lists for Email and SMS
+Please share the names of [your main Klaviyo lists](https://help.klaviyo.com/hc/en-us/articles/360043947571) (which have marketing consent) for:
+
+1. Email
+2. SMS
+
+If you don't have a main list for each of these, we'll need a list for both channels so that we can subscribe the shopper with marketing permissions.
+
+## How data will appear in Klaviyo
+
+First gocertify will send the shopper's data to Klaviyo as a Profile. Within both verification and standard offers the profile will be subscribed to Email and/or SMS marketing.
+
+<img
+  className="block dark:hidden"
+  src="/images/klaviyoProfile.png"
+  alt="Klaviyo Profile"
+  style={{ borderRadius: '0.5rem' }}
+/>
+<img
+  className="hidden dark:block"
+  src="/images/klaviyoProfile.png"
+  alt="Klaviyo Profile"
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+We'll log an event on the profile when an offer has been claimed
+
+<CardGroup>
+<Card>
+With verification-based offers e.g. students/key workers. Events will then be logged on a profile level for “Verified as `group`”
+<img
+  className="block dark:hidden"
+  src="/images/klaviyoVerificationProfile.png"
+  alt="Klaviyo Verification Profile"
+  style={{ borderRadius: '0.5rem' }}
+/>
+<img
+  className="hidden dark:block"
+  src="/images/klaviyoVerificationProfile.png"
+  alt="Klaviyo Verification Profile"
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+
+</Card>
+<Card>
+With standard offers e.g. discounts. Events will then be logged on a profile level for “Offer claimed”
+<img
+  className="block dark:hidden"
+  src="/images/klaviyoOpenOffers.png"
+  alt="Klaviyo Open Offers"
+  style={{ borderRadius: '0.5rem' }}
+/>
+<img
+  className="hidden dark:block"
+  src="/images/klaviyoOpenOffers.png"
+  alt="Klaviyo Open Offers"
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+</Card>
+</CardGroup>
+
+## How to create segments in Klaviyo
+You can build segments based on the “verified as …” event for each group you'd like to verify. 
+If you'd like a key worker group, you can use OR statements to create a wider group of many occupations.
+
+<img
+  className="block dark:hidden"
+  src="/images/klaviyoSegments.png"
+  alt="Klaviyo Segments"
+  style={{ borderRadius: '0.5rem' }}
+/>
+<img
+  className="hidden dark:block"
+  src="/images/klaviyoSegments.png"
+  alt="Klaviyo Segments"
+  style={{ borderRadius: '0.5rem' }}
+/>

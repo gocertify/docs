@@ -1,0 +1,78 @@
+---
+title: 'Webhooks & Zapier'
+description: 'Start building loyal communities with targeted, gated offers.'
+icon: 'share-from-square'
+---
+
+gocertify offers a webhook integration that allows you to connect with other services, including automations tools like [Zapier](https://zapier.com/), [Make](https://www.make.com/) and [Tray](https://tray.io/). 
+This can be used to trigger automated actions each time a shopper is verified or claims an offer.
+
+To go live simply provide the endpoint to the partners@gocertify.me - this endpoint will usually [be generated](https://help.zapier.com/hc/en-us/articles/8496083355661-How-to-get-started-with-Webhooks-by-Zapier) by your iPaaS (Make.com, Zapier, Tray, etc) or by your IT team.
+
+## Webhook Events
+
+We will send you two events. THe first event happens at Step 1 of the flow below (`Data sent to your CRM`), and the second event happens at Step 3 (`Verification status sent to CRM`).
+
+<Frame caption="DataCapture adds an additional step to the reward flow where you can collect data from shoppers">
+  <img
+    className="block dark:hidden"
+    src="/images/dataCaptureFlow.png"
+    alt="DataCapture Flow"
+  />
+  <img
+    className="hidden dark:block"
+    src="/images/dataCaptureFlow.png"
+    alt="DataCapture Flow"
+  />
+</Frame>
+
+
+<CodeGroup>
+```json First Event
+
+   {
+   "state": "consent-intent",   // ← this means it's a "First request"
+   "email": "sarah@example.com",
+   "share_email": true,         // ← "true" if they want to share it
+   "phone_number": "+447881096570",
+   "share_phone_number": true,  
+   "type": "Code",              // ← it could be "Code" or "Deal"
+   "pending_group_type": "Occupation",   // ← or "Open", for non-verification campaigns
+   "pending_group_parent": "Key Worker", // ← or "Open", for non-verification campaigns
+   "pending_group_child": "NHS Worker",  // ← or "Open", for non-verification campaigns
+   "coupon_code": "",        // ← will be empty as the user hasn't get the coupon yet.
+   "token": "ABCD1234"       // ← our internal randomly generated identifier
+   "brand_slug": "amazon",   // ← the identifier of the customer
+   "campaign_id": 1234,      // ← the gocertify's campaign's identifier
+   "campaign_title": "20% OFF for Key Workers",  // ← the title of the campaign
+   "campaign_url": "https://secure.gocertify.me/at/amazon",   // ← the url of our campaign
+   "iframe_parent_url": "https://www.customer-website/keyworkers",  // ← might not be present
+   "date": Time.now.iso8601                // ← the current date, in iso8601 format.    
+   "message": "Join the NHS newsletter...", // ← The complete text in the consent page
+   }
+
+```
+```json Second Event
+
+{
+  "state": "offer-claimed",               // ← this means it's a "Second request"
+  "email": "sarah@example.com",
+  "share_email": true,                    // ← will be the same value as the first request
+  "phone_number": "+447881096570",
+  "share_phone_number": true,             // ← will be the same value as the first request
+  "type": "Code",                         // ← it could be "Code" or "Deal"
+  "group_type": "Occupation",             // ← or "Open", for non-verification campaigns
+  "group_parent": "Key Worker",           // ← or "Open", for non-verification campaigns
+  "group_child": "NHS Worker",            // ← or "Open", for non-verification campaigns
+  "coupon_code": "EXAMPLECODE",           // ← might not be present if it's a "Deal" type.
+  "token": "ABCD1234"                     // ← will be the same value as the first request
+  "brand_slug": "amazon",                 // ← will be the same value as the first request
+  "campaign_id": 1234,                    // ← will be the same value as the first request
+  "campaign_title": "20% OFF for Key Workers",  // ← will be the same value as the first request
+  "campaign_url": "https://secure.gocertify.me/at/amazon",   // ← will be the same value as the first request
+  "iframe_parent_url": "https://www.customer-website/keyworkers",  // ← will be the same value as the first request
+  "date": Time.now.iso8601                // ← the current date, in iso8601 format.
+}
+
+```
+</CodeGroup>
