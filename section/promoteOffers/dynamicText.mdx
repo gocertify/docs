@@ -7,13 +7,12 @@ icon: 'fa-fw'
 gocertify makes it easy to display dynamic variables in your on site messages. This is especially powerful when used to display the exact saving amount shoppers will receive for a given product item, driving higher conversion rates.
 
 
-<img src="/images/OSM.png" alt="Dynamic Text" style={{ borderRadius: '0.5rem' }} />
+<img src="/images/OSM-cta.png" alt="Dynamic Text" style={{ borderRadius: '0.5rem' }} />
 
 To enable this feature, you need to let gocertify know a bit more about the page where the placement is
 being displayed. Specifically, we need to know the price and the currency of the product that is being displayed.
 
-We do this by adding two extra data attributes called `data-purchase-amount` and `data-locale`, and the way of setting them will depend on
-the integration you are using (See details below).
+You can do this by adding two extra data attributes (`data-purchase-amount` and `data-locale`) to the head script. See below for a tutorial based on the integration you are using.
 
 <Tip>
   Make sure that the price is set in cents. For example, if the price is $10.99, the attribute should be set to **1099**.
