@@ -4,28 +4,66 @@ description: 'Convert shoppers with targeted, gated rewards.'
 icon: 'fa-fw'
 ---
 
-Gift cards are a powerful way of both converting shoppers and encouraging repeat purchases. Once a shopper has verified their status, and purchased an item,
-gocertify will issue a gift card via SMS automatically once the transaction is approved by your network. 
+<Tip>
+  **Important:** This flow requires a connection to your Affiliate Network (through affiliate links).
+</Tip>
 
+Gift cards are a powerful way of both converting shoppers and encouraging repeat purchases. Once a shopper has verified their status, and purchased an item,
+gocertify will issue a gift card via SMS automatically once the transaction is approved by your network.
+
+You will need to issue e-gift card codes in your network (or through your own system). They can be in the form of a unique code or a unique URL.
 
 <Accordion title="Uploading CSV of gift cards" icon="file-csv">
-    The easiest way to issue gift cards is to provide the gocertify client success team with a CSV of unique gift card URLs. We will provide each shopper with this URL via SMS when qualifying transactions are approved by your network.
+  Once you have generated a list of e-gift card codes, you can send the resulting CSV file to your Customer Success Manager.
+  We will notify you when we are running out of gift card codes.
 </Accordion>
 
+From a shopper's perspective, the flow is as follows:
+
 <Frame caption="Shopper journey for the gift card flow">
-<Steps>
+  <Steps>
     <Step title="Shopper verifies">
-        Shopper verifies their status using gocertify.
+      Shopper verifies their status using gocertify.
     </Step>
     <Step title="Qualifying purchase made">
-        Shopper purchases an item, which is tracked through your affiliate network.
+      Shopper purchases an item, which is tracked through your affiliate network.
     </Step>
-    <Step title="Returns cleared">
-        Shopper completes the returns period.
+    <Step title="First notification">
+      Once gocertify receives the transaction from the Affiliate Network (typically within 24 hours), we will send a notification to the shopper.
     </Step>
     <Step title="Gift Card Issued">
-        gocertify issues a gift card to the shopper's phone number.
+      Once the transaction is approved by the Affiliate Network (typically 60 days after the purchase), we will issue the gift card to the shopper.
     </Step>
-
-</Steps>
+  </Steps>
 </Frame>
+
+## Configuring the flow
+
+Each campaign at gocertify can have a specific flow configured, setting some rules for the gift card assignment:
+
+- **Purchase amount**: The minimum purchase amount that qualifies for a gift card.
+- **Commission amount**: A value (or range) for the commission amount that qualifies for a gift card.
+- **Gift card batch (CSV)**: The CSV file containing the gift card codes.
+
+For example, you could have 2 campaigns running at the same time:
+
+- Campaign 1: _"Get a £20 gift card for purchases over £100"_
+- Campaign 2: _"Get a £50 gift card for purchases over £200"_
+
+A shopper could use the Campaign 2 flow (as it has a higher gift card value), and end up buying a £150 item.
+
+In this case, even though they use the Campaign 2 flow, they will receive a £20 gift card, as the purchase amount matches the Campaign 1 flow, and not the Campaign 2 flow.
+
+## Advanced configuration
+
+If you want to have more control over what specific purchases should qualify for a gift card, you can use the commission amount rule.
+
+For example, you could have a campaign like this one:
+
+- Campaign 3: _"Get a £40 gift card when purchasing the latest iPhone"_
+
+And we set a specific commission amount for this campaign, let's say £10.55.
+
+Then, you can set your own rules on your Affiliate Network to assign that specific commission amount if the item purchased is the latest iPhone.
+
+All the rest of the flow will work as expected, and the shopper will receive a £40 gift card once the transaction (with a commission amount of £10.55) is approved by the Affiliate Network.
