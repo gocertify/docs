@@ -12,3 +12,49 @@ Inline placements are a powerful way to drive conversions by surfacing offers di
   </Card>
 </CardGroup>
 
+## How to enable inline placements
+You can one click enable inline placements on any page where you have already installed the gocertify head script (see [integrate on site](/section/gettingStarted/integrateOnSite)) without the need for a developer.
+Simply log into your [gocertify dashboard](https://secure.gocertify.me/dashboard) and click on the On-Site Messaging tab.
+
+<img
+  className="block dark:hidden"
+  src="/images/osm-inline-dashboard.png"
+  alt="Inline On-Site Messaging Dashboard"
+  style={{ borderRadius: '0.5rem' }}
+/>
+<img
+  className="hidden dark:block"
+  src="/images/osm-inline-dashboard.png"
+  alt="Inline On-Site Messaging Dashboard"
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+
+## How to position your inline placement
+To decide where to position your inline placement you can either add a snippet of code on-site or use a CSS anchor
+
+### Using a CSS anchor
+To position an inline placement without a developer you can use a CSS anchor. gocertify will automatically position the placement at the bottom of the element with the matching CSS selector.
+
+### Using a snippet of code
+If you want to explicitly position your inline placement on-site you can add a snippet of code to the page where you want to display the placement. Within your dashboard, click on `this placement code` text and paste it into the page where you want to display the placement.
+
+```html
+<gocertify-placement id="..." data-locale="en-GB" data-purchase-amount="" ></gocertify-placement>
+```
+
+<img
+  className="block dark:hidden"
+  src="/images/osm-inline-copy-code.png"
+  alt="Inline On-Site Messaging Copy Code"
+  style={{ borderRadius: '0.5rem' }}
+/>
+<img
+  className="hidden dark:block"
+  src="/images/osm-inline-copy-code.png"
+  alt="Inline On-Site Messaging Copy Code"
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+
+
