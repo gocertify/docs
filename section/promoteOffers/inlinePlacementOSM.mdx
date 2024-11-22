@@ -36,6 +36,24 @@ To decide where to position your inline placement you can either add a snippet o
 ### Using a CSS anchor
 To position an inline placement without a developer you can use a CSS anchor. gocertify will automatically position the placement at the bottom of the element with the matching CSS selector.
 
+<Tip>
+    You can set a different CSS anchor for mobile vs. desktop (breakpoint is 768px) to ensure the placement is always visible.
+</Tip>
+
+
+<img
+  className="block dark:hidden"
+  src="/images/cssAnchor.png"
+  alt="CSS Anchor"
+  style={{ borderRadius: '0.5rem' }}
+/>
+<img
+  className="hidden dark:block"
+  src="/images/cssAnchor.png"
+  alt="CSS Anchor"
+  style={{ borderRadius: '0.5rem' }}
+/>
+
 ### Using a snippet of code
 If you want to explicitly position your inline placement on-site you can add a snippet of code to the page where you want to display the placement. Within your dashboard, click on `this placement code` text and paste it into the page where you want to display the placement.
 
