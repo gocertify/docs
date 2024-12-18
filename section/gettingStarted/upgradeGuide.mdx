@@ -1,0 +1,52 @@
+---
+title: Upgrade Guide
+description: 'Upgrade from the old embed.js script to the new gocertify.js script.'
+icon: "gear"
+---
+
+<Tip>
+  If you integrated Gocertify on your site before December 2024, you will need to upgrade to the new gocertify.js script.
+</Tip>
+
+We transitioned from the legacy `embed.js` script to the new `gocertify.js` script in December 2024. This change was necessary to improve performance and ensure compatibility with new features, like On Site Messaging.
+
+We highly recommend upgrading to the new script as soon as possible, even though the old script is still supported.
+
+## How to upgrade
+
+The upgrade should be very straightforward, and it will depend on what features you are using.
+
+<Steps>
+  <Step title="Replace the script">
+    Delete the old `embed.js` script and replace it with the new `gocertify.js` script.
+    Follow the instructions in the [integrate on-site](/section/gettingStarted/integrateOnSite) page to add the new script to your site.
+    <Info>
+      Note that the new script requires a unique parameter called `data-brand`.<br/>
+      If you previously used `data-location="/at/your-brand/some-campaign"`, you now need to use `brand="your-brand"` instead.
+    </Info>
+  </Step>
+  <Step title="Include your iframe">
+    If you are using the iframe feature, you will need to update the iframe code to the new `<gocertify-iframe>` tag.
+    Follow the instructions in the [landing Pages](/section/gettingStarted/landingPages) page to add the new iframe to your site.
+    <Info>
+      Note that the new iframe tag requires a unique parameter called `source`.<br/>
+      If you previously used `data-location="/at/your-brand/student"`, you now need to use `<gocertify-iframe source="student"></gocertify-iframe>` instead.
+    </Info>
+  </Step>
+  <Step title="Include your Offer Hub">
+    If you are using the Offer Hub feature, you will need to update the Offer Hub code to the new `<gocertify-hub>` tag.
+    Follow the instructions in the [Offer Hub](/section/promoteOffers/offerHub) page to add the new Offer Hub to your site.
+    <Info>
+      Note that the new tag doesn't require any extra parameters.<br/>
+      If you previously used `data-location="/at/your-brand/hub"`, you now need to use simply `<gocertify-hub></gocertify-hub>` instead.
+    </Info>
+  </Step>
+</Steps>
+
+## Deprecated attributes
+
+The legacy `embed.js` script used the following optional attributes that are no longer supported:
+
+- `data-location`
+- `data-autoload`
+- `data-placement-lookup`
