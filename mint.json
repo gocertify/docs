@@ -94,7 +94,8 @@
         "section/promoteOffers/linking-to-offers",
         "section/promoteOffers/popups",
         "section/promoteOffers/inStore",
-        "section/promoteOffers/osmPersonalisationIntegrations"
+        "section/promoteOffers/osmPersonalisationIntegrations",
+        "section/promoteOffers/shopifyIntegration"
       ]
     },
     {
