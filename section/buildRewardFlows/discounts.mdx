@@ -20,12 +20,22 @@ preferred ecommerce platform or promotion service.
     Provide us with a single column CSV of discount codes.
 </Accordion>
 <Accordion title="Integrating with Shopify" icon="shopify">
-    [Install the gocertify Shopify app](/section/gettingStarted/integrateOnSite#shopify) to fetch codes directly from your Shopify discount feed.
+    <Steps>
+        <Step title="Install gocertify Shopify app">
+        Install the [gocertify Shopify app](/section/gettingStarted/integrateOnSite#shopify) by requesting a link from your gocertify account manager.
+        </Step>
+        <Step title="Create a discount">
+            Create a discount in Shopify and name it using the following convention: `GC-campaignSlug-discountPercentage`, i.e. `GC-keyWorkers-20` for a 20% discount targeted at key workers. 
+        </Step>
+        <Step title="Set the discount settings">
+            - Check the option `Limit the number of times this discount code can be used` and set it to `1`. 
+            - Leave the `Limit to one use per customer` option unchecked.
+        </Step>
+    </Steps>
+    <img src="/images/shopify/shopify-discountFormat.png" alt="Shopify discount settings" />
     <Tip>
     You do not need to enable the embed script again if you have already added this through another method and only want to integrate the discount feed.
     </Tip>
-    
-    We will create a new unique code for each shopper, ensuring that you never run out of codes and can easily track performance.
 </Accordion>
 <Accordion title="Integrating with Uniqodo" icon="ticket-simple">
     Provide us with your Uniqodo `API key` and `offer ID` (e.g. 9384) and we'll automatically add codes to your campaign. You can also upload a CSV of discount codes as a fallback.
