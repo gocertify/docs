@@ -1,0 +1,130 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "gocertify",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "section/gettingStarted/overview",
+              "section/gettingStarted/quickStart",
+              "section/gettingStarted/integrateOnSite",
+              "section/gettingStarted/landingPages",
+              "section/gettingStarted/customiseBranding",
+              "section/gettingStarted/upgradeGuide"
+            ]
+          },
+          {
+            "group": "Create Campaigns",
+            "pages": [
+              "section/buildRewardFlows/overview",
+              "section/buildRewardFlows/chooseReward",
+              "section/buildRewardFlows/discounts",
+              "section/buildRewardFlows/giftCards",
+              "section/buildRewardFlows/gatedContent",
+              "section/buildRewardFlows/customiseCopy",
+              "section/buildRewardFlows/closedUserGroups"
+            ]
+          },
+          {
+            "group": "Capture Zero-Party Data",
+            "pages": [
+              "section/captureData/overview",
+              "section/captureData/customFields",
+              "section/captureData/csvExport",
+              "section/captureData/webhooksZapier",
+              "section/captureData/CDPintegrationOverview"
+            ]
+          },
+          {
+            "group": "Promote across Channels",
+            "pages": [
+              "section/promoteOffers/overview",
+              "section/promoteOffers/on-site-placements",
+              "section/promoteOffers/osmVisibility",
+              "section/promoteOffers/dynamicText",
+              "section/promoteOffers/landingPages",
+              "section/promoteOffers/offerHub",
+              "section/promoteOffers/linking-to-offers",
+              "section/promoteOffers/popups",
+              "section/promoteOffers/inStore",
+              "section/promoteOffers/osmPersonalisationIntegrations",
+              "section/promoteOffers/shopifyIntegration"
+            ]
+          },
+          {
+            "group": "Track Impact",
+            "pages": [
+              "section/trackImpact/report"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "groups": [
+          {
+            "group": "Changelog",
+            "pages": [
+              "changelog/overview"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Dashboard",
+          "href": "https://secure.gocertify.me/dashboard",
+          "icon": "house"
+        },
+        {
+          "anchor": "Playbooks",
+          "href": "https://www.gocertify.me/playbooks?tag=Channel",
+          "icon": "book-open"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "appearance": {
+    "default": "light"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:partners@gocertify.me"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://secure.gocertify.me/dashboard"
+    }
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://linkedin.com/company/gocertifyme"
+    }
+  },
+  "integrations": {
+    "pirsch": {
+      "id": "0uBBkXEzHrfAKAXpJTffVWIL8XwfP1Nf"
+    }
+  }
+}
