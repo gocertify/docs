@@ -4,39 +4,45 @@ description: 'Start building loyal communities with targeted, gated offers.'
 icon: 'fa-fw'
 ---
 
-The OSM visibility toolkit lets you control exactly when and where your offers are displayed to shoppers. There are four fundamental types of visibility rules. 
+The OSM visibility toolkit lets you control exactly when and where your offers are displayed to shoppers. There are six fundamental types of visibility rules. 
 
 
 <AccordionGroup>
   <Accordion title="Path" icon="link">
-   Input plain text to match the path (https://secure.gocertify.me/ `this/is/the/path`) you want to show/hide the OSM. Use regex for more complex rules.
-   <Frame>
-   <img src="/images/visibility-rule-path.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
-   </Frame>
+    Input plain text to match the path (https://secure.gocertify.me/ `this/is/the/path`) you want to show/hide the OSM. Use regex for more complex rules.
+      <Frame>
+      <img src="/images/visibility-rule-path.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
+      </Frame>
   </Accordion>
   <Accordion title="Date" icon="calendar-days">
   Select a start and end date for when the offer should be displayed.
-   <Frame>
-   <img src="/images/visibility-rule-date.png" alt="Date rule" width="50%" style={{ borderRadius: '0.5rem' }} />
-   </Frame>
+      <Frame>
+      <img src="/images/visibility-rule-date.png" alt="Date rule" width="50%" style={{ borderRadius: '0.5rem' }} />
+      </Frame>
   </Accordion>
   <Accordion title="Time" icon="clock">
   Select a start and end time for when the offer should be displayed. This will be recurring on every day of the week.
-  <Frame    >
-  <img src="/images/visibility-rule-time.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
-  </Frame>
+    <Frame>
+    <img src="/images/visibility-rule-time.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
+    </Frame>
   </Accordion>
   <Accordion title="Price" icon="money-check-dollar">
   Select a minimum/maximum/exact price for when the offer should be displayed.
-  <Frame    >
-  <img src="/images/visibility-rule-price.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
-  </Frame>
+    <Frame>
+    <img src="/images/visibility-rule-price.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
+    </Frame>
   </Accordion>
   <Accordion title="Dwell Time" icon="unlock-keyhole">
-  Displayed the offer based on how long the shopper has spent on the page.
-  <Frame>   
-  <img src="/images/visibility-rule-dwell-time.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
-  </Frame>
+  Display the offer based on how long the shopper has spent on the page.
+    <Frame>   
+    <img src="/images/visibility-rule-dwell-time.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
+    </Frame>
+  </Accordion>
+  <Accordion title="Script" icon="code">
+   Display this placement based on data from your DataLayer or any other source that can be accessed via JavaScript.
+    <Frame>   
+    <img src="/images/osm/osmScriptVisibilityRule.png" alt="Path rule" width="50%" style={{ borderRadius: '0.5rem' }} />
+    </Frame>
   </Accordion>
 </AccordionGroup>
 
