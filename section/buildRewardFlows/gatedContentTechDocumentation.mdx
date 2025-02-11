@@ -4,11 +4,11 @@ description: 'Convert shoppers with targeted, gated rewards.'
 icon: 'fa-fw'
 ---
 
-The gocertify magic link let's you provide secure access to private content or storefronts with the discounts pre-applied post verification. 
+The Gocertify magic link let's you provide secure access to private content or storefronts with the discounts pre-applied post verification. 
 
 ## Set up
 
-To set up secure access use the `data-subid` attribute to pass gocertify a value e.g. a `session_id` or `user_id`. gocertify can then 
+To set up secure access use the `data-subid` attribute to pass Gocertify a value e.g. a `session_id` or `user_id`. Gocertify can then 
 pass back this attribute alongside a `token` (a random 8 chars string unique to the verification request). You can then validate the authenticity of that request in two ways:
 
 ### Option 1: Adding a request signature
@@ -30,8 +30,8 @@ You can get the parameters (excluding the signature) and try to generate the sig
 </Tip>
 
 ### Option 2: Validation API
-When you can't use the request signature and still need to validate in gocertify the authenticity of a request. You can use our simple Validation API. 
-When you send the parameters back to gocertify we will respond with our version of that specific verification process.
+When you can't use the request signature and still need to validate in Gocertify the authenticity of a request. You can use our simple Validation API. 
+When you send the parameters back to Gocertify we will respond with our version of that specific verification process.
 
 The main flow is shown in the figure below:
 

@@ -4,10 +4,10 @@ description: 'Start building loyal communities with targeted, gated offers.'
 icon: 'fa-fw'
 ---
 
-When a shopper submits their email and/or mobile number, gocertify will send this data to the your Dotdigital account in the form of a gocertify event. This is represented by a “Profile” (either augmenting an existing one or creating a new one).
+When a shopper submits their email and/or mobile number, Gocertify will send this data to the your Dotdigital account in the form of a Gocertify event. This is represented by a “Profile” (either augmenting an existing one or creating a new one).
 
-As the shopper goes on to successfully verify as a target group (student, healthcare, senior, etc) another “Event” will be triggered, gocertify will update the Contact, setting a new field called `GC_{{VERIFIED_GROUP}}_AT` with the current date in IS08601 format.
-We will create as many fields to the Contact object as needed according to the campaigns set with gocertify and use the “group_verification” from boththe Parent Group and the Child Group. For example, if you are running a Military campaign, you will see 2 fields:
+As the shopper goes on to successfully verify as a target group (student, healthcare, senior, etc) another “Event” will be triggered, Gocertify will update the Contact, setting a new field called `GC_{{VERIFIED_GROUP}}_AT` with the current date in IS08601 format.
+We will create as many fields to the Contact object as needed according to the campaigns set with Gocertify and use the “group_verification” from boththe Parent Group and the Child Group. For example, if you are running a Military campaign, you will see 2 fields:
 
     - GC_MILITARY_AT
     - GC_KEY_WORKER_AT
@@ -15,11 +15,11 @@ We will create as many fields to the Contact object as needed according to the c
 With this data, you will be able to generate segments based on these events.
 
 <Tip>
-    gocertify is going to truncate the verified group to 14 characters, because we can’t create a data field in Dotdigital larger than 20 characters.
+    Gocertify is going to truncate the verified group to 14 characters, because we can’t create a data field in Dotdigital larger than 20 characters.
 </Tip>
 
 ## Requirements to go live
-To go live with dotdigital you will need to create an API user and share the details with gocertify.
+To go live with dotdigital you will need to create an API user and share the details with Gocertify.
 <Accordion title="See step by step tutorial">
 <Steps>
     <Step title="Access Project Settings">
@@ -140,7 +140,7 @@ To go live with dotdigital you will need to create an API user and share the det
         Copy the user's email address and password for the user recently created.
     </Step>
 
-    <Step title="Share the user details with gocertify">
+    <Step title="Share the user details with Gocertify">
         Go to onetimesecret.com and paste the copied user email and the password. Even if it's not required, we encourage you to also add a random “Passphrase”. 
         This will generate a secret link that will expire within 7 days and will be visible only once.
 
@@ -168,7 +168,7 @@ To go live with dotdigital you will need to create an API user and share the det
 Once the user shares their information with your brand and the user confirms the subscription request (verified double Opt-in option), you will see a new contact in your base,
 with the email and mobile_number (if it's shared) and the respective Opt-in option.
 
-<Frame caption="Example of a Dotdigital user created by gocertify">
+<Frame caption="Example of a Dotdigital user created by Gocertify">
 <img
   className="block dark:hidden"
   src="/images/dotDigitalUser.png"
@@ -183,7 +183,7 @@ with the email and mobile_number (if it's shared) and the respective Opt-in opti
 />
 </Frame>
 
-After the user verifies themself, gocertify will update the contact in your base, adding as many `GC_XXXX_AT` data fields as needed, with the current date in ISO8601 format.
+After the user verifies themself, Gocertify will update the contact in your base, adding as many `GC_XXXX_AT` data fields as needed, with the current date in ISO8601 format.
 
 You will see something like this:
 
@@ -208,14 +208,14 @@ You will see something like this:
 
 ## How to create segments in Dotdigital
 
-Once you start receiving data from gocertify, you will be able to set all the Segments you desire.
+Once you start receiving data from Gocertify, you will be able to set all the Segments you desire.
 
-In the side menu, go to “Audience” > “Segments” and then follow the steps to create a new segment based on the data fields created by gocertify.
+In the side menu, go to “Audience” > “Segments” and then follow the steps to create a new segment based on the data fields created by Gocertify.
 
 <Accordion title="See step by step tutorial">
 <Steps>
     <Step title="Click the “New Segment” button.">
-        In the side menu, go to “Audience” > “Segments” and then follow the steps to create a new segment based on the data fields created by gocertify.
+        In the side menu, go to “Audience” > “Segments” and then follow the steps to create a new segment based on the data fields created by Gocertify.
         <img
         className="block dark:hidden"
         src="/images/dotDigitalNewSegment.png"

@@ -4,12 +4,12 @@ description: 'Start building loyal communities with targeted, gated offers.'
 icon: 'fa-fw'
 ---
 
-gocertify makes it easy to display dynamic variables in your on site messages. This is especially powerful when used to display the exact saving amount shoppers will receive for a given product item, driving higher conversion rates.
+Gocertify makes it easy to display dynamic variables in your on site messages. This is especially powerful when used to display the exact saving amount shoppers will receive for a given product item, driving higher conversion rates.
 
 
 <img src="/images/OSM-cta.png" alt="Dynamic Text" style={{ borderRadius: '0.5rem' }} />
 
-To enable this feature, you need to let gocertify know a bit more about the page where the placement is
+To enable this feature, you need to let Gocertify know a bit more about the page where the placement is
 being displayed. Specifically, we need to know the price and the currency of the product that is being displayed.
 
 You can do this by adding two extra data attributes (`data-purchase-amount` and `data-locale`) to the head script. See below for a tutorial based on the integration you are using.
@@ -32,7 +32,7 @@ You can do this by adding two extra data attributes (`data-purchase-amount` and 
         <img src="/images/GTM-variables.png" alt="GTM Variables" style={{ borderRadius: '0.5rem' }} />
       </Step>
         <Step title="Add New Line to Head Script">
-        Navigate back to the gocertify head script within the tags section and add a new line using the format `el.setAttribute('data-purchase-amount', '{{variable_name}}');` and the variable name you noted in the previous step.
+        Navigate back to the Gocertify head script within the tags section and add a new line using the format `el.setAttribute('data-purchase-amount', '{{variable_name}}');` and the variable name you noted in the previous step.
 
         <Tip>
           Remember that the price should be set in cents, so you should need to parse that value to float and multiply it by 100.
@@ -57,7 +57,7 @@ You can do this by adding two extra data attributes (`data-purchase-amount` and 
   </Accordion>
 
   <Accordion title="Via inline placement" icon="sign-hanging">
-    If you added the gocertify placement manually in the `<body>` section of your page, you can set the data attributes like this:
+    If you added the Gocertify placement manually in the `<body>` section of your page, you can set the data attributes like this:
     <CodeGroup>
       ```PHP PHP
       <gocertify-placement id="<?= $placementId ?>" data-locale="en-GB" data-purchase-amount="<?= $price ?>"></gocertify-placement>

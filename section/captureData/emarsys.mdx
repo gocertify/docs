@@ -4,13 +4,13 @@ description: 'Start building loyal communities with targeted, gated offers.'
 icon: 'fa-fw'
 ---
 
-Once the user submits their email and/or mobile number, gocertify will send this data your Emarsys account, creating (or updating) a *Contact*, with the “Opt-in” field set as `True`. Gocertify will also trigger an *External Event* called `gocertify_consent_intent`, which can be used to create automations.
+Once the user submits their email and/or mobile number, Gocertify will send this data your Emarsys account, creating (or updating) a *Contact*, with the “Opt-in” field set as `True`. Gocertify will also trigger an *External Event* called `gocertify_consent_intent`, which can be used to create automations.
 
-After that screen, when the user successfully verifies as a target group (student, healthcare, senior, etc), gocertify will update the Contact, setting a new field called “gocertify_student_verified_at” with the current date, useful to generate *Segments*. 
-gocertify will also trigger another External Event called `gocertify_offer_claimed`, that can be used to initiate another automation.
+After that screen, when the user successfully verifies as a target group (student, healthcare, senior, etc), Gocertify will update the Contact, setting a new field called “gocertify_student_verified_at” with the current date, useful to generate *Segments*. 
+Gocertify will also trigger another External Event called `gocertify_offer_claimed`, that can be used to initiate another automation.
 
 ## Requirements to go live
-To start syncing data you'll need to create a new API user and share the details with your gocertify account manager.
+To start syncing data you'll need to create a new API user and share the details with your Gocertify account manager.
 
 <Accordion title="See step by step tutorial">
     <Steps>
@@ -63,7 +63,7 @@ To start syncing data you'll need to create a new API user and share the details
 
         </Step>
 
-        <Step title="Share the user details with gocertify">
+        <Step title="Share the user details with Gocertify">
         Go to onetimesecret.com and paste the copied user email and the password. Even if it's not required, we encourage you to also add a random “Passphrase”. 
         This will generate a secret link that will expire within 7 days and will be visible only once.
 
@@ -145,7 +145,7 @@ To start syncing data you'll need to create a new API user and share the details
 
     </Step>
 
-    <Step title="Collect the field ID and share with gocertify">
+    <Step title="Collect the field ID and share with Gocertify">
     Collect the *Field ID* for the following fields:
 
     - **Email** (it's usually “3”)
@@ -161,7 +161,7 @@ To start syncing data you'll need to create a new API user and share the details
 
 Once the user shares their information with your brand, you will see a new Contact in your base, with the email and mobile_number (if it's enabled) and the respective Opt-in fields set as *true* (*Opt-in* and *Mobile SMS Opt-In*).
 
-Together with the creation (update) of the Contact, gocertify will create and trigger an External event, called “gocertify_consent_intent”. After the user verifies themself, gocertify will update the Contact in your base, adding as many “gocertify_xxx_verified_at” fields as needed, with the current date.
+Together with the creation (update) of the Contact, Gocertify will create and trigger an External event, called “gocertify_consent_intent”. After the user verifies themself, Gocertify will update the Contact in your base, adding as many “gocertify_xxx_verified_at” fields as needed, with the current date.
 
 <CodeGroup>
 ```json First Event
@@ -175,7 +175,7 @@ Together with the creation (update) of the Contact, gocertify will create and tr
   brand_slug: "amazon",                 // ← the identifier of the customer
   brand_country: "GB",                  // ← the country set in our system
   user_country: "GB",                   // ← the user's country (based on their mobile number, if shared)
-  campaign_id: 1234,                    // ← the gocertify's campaign's identifier
+  campaign_id: 1234,                    // ← the Gocertify's campaign's identifier
   campaign_title: "20% OFF for Key Workers",  // ← the title of the campaign
   campaign_url: "https://secure.gocertify.me/at/amazon",   // ← the url of our campaign
   iframe_parent_url: "https://www.customer-website/keyworkers",  // ← might not be present
@@ -193,7 +193,7 @@ Together with the creation (update) of the Contact, gocertify will create and tr
   brand_slug: "amazon",                 // ← the identifier of the customer
   brand_country: "GB",                  // ← the country set in our system
   user_country: "GB",                   // ← the user's country (based on their mobile number, if shared)
-  campaign_id: 1234,                    // ← the gocertify's campaign's identifier
+  campaign_id: 1234,                    // ← the Gocertify's campaign's identifier
   campaign_title: "20% OFF for Key Workers",  // ← the title of the campaign
   campaign_url: "https://secure.gocertify.me/at/amazon",   // ← the url of our campaign
   iframe_parent_url: "https://www.customer-website/keyworkers",  // ← might not be present
@@ -222,11 +222,11 @@ Within your account you will see the shopper:
 
 ## How to create segments in Emarsys
 
-Once you start receiving data from gocertify, you will be able to set all the Segments you desire.
+Once you start receiving data from Gocertify, you will be able to set all the Segments you desire.
 
 In the side menu, go to “Contacts” > “Segments” and then create a new one. In the Criteria filter, you will have all the “gocertify_xxx_verified_at” fields. Depending on your needs, you can use one, or many conditions.
 
-<Frame caption="Example of how to segment gocertify shoppers within Emarsys">
+<Frame caption="Example of how to segment Gocertify shoppers within Emarsys">
     <img
     className="block dark:hidden"
     src="/images/emarsysSegmentation.png"
@@ -241,7 +241,7 @@ In the side menu, go to “Contacts” > “Segments” and then create a new on
     />
 </Frame>
 
-If you want to create a Segment with all the Contacts verified through gocertify, you will need to define that “any of those fields” is not empty.
+If you want to create a Segment with all the Contacts verified through Gocertify, you will need to define that “any of those fields” is not empty.
 
 If you want to create a Segment with only “Transport” workers, simply use the “gocertify_transport_verified_at” field.
 
