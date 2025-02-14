@@ -33,7 +33,8 @@
               "section/buildRewardFlows/giftCards",
               "section/buildRewardFlows/gatedContent",
               "section/buildRewardFlows/customiseCopy",
-              "section/buildRewardFlows/closedUserGroups"
+              "section/buildRewardFlows/closedUserGroups",
+              "section/buildRewardFlows/rewardGuardrails"
             ]
           },
           {
@@ -71,7 +72,7 @@
         ]
       },
       {
-        "tab": "Changelog",
+        "tab": "✨ New Features",
         "groups": [
           {
             "group": "Changelog",
