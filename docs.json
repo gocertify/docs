@@ -66,6 +66,8 @@
           {
             "group": "Track Impact",
             "pages": [
+              "section/trackImpact/overview",
+              "section/trackImpact/conversionTracking",
               "section/trackImpact/report"
             ]
           }

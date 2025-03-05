@@ -1,0 +1,32 @@
+---
+title: Overview
+description: 'Monitor the impact of your campaigns.'
+---
+
+The journey of a shopper within Gocertify ends up in the "Tracking link", which in some cases could be an affiliate
+link and in others a custom link you've created.
+
+One of the simplest ways to track the impact of your campaigns is to use a special query parameter in this Tracking link
+the shopper is sent to after completing their verification, with the details of the campaign or group they
+verified.
+
+For example, if you are running campaigns for Students, you can get this information added
+like this:
+
+```
+https://example.com/your-page?campaign=student
+```
+
+This parameter is called `campaign` in the example but it could be any name you want, including an UTM parameter,
+like `utm_campaign`.
+
+## Back and forth
+
+Sometimes, you might want to pass some information about the session to us and get it back in the Tracking link (think
+about a referral campaign, for example).
+
+To do this, we support 2 special parameters, called `subid` and `clickref`. The only difference between the two is
+that `subid` is persisted to the coupon_request, while `clickref` is ephemeral and will only be available in the
+current session.
+
+See how to set them in your landing pages [here](/section/gettingStarted/landingPages).
