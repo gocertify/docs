@@ -1,0 +1,40 @@
+---
+title: Conversion Tracking
+description: 'Monitor all your transactions and conversions in one place.'
+icon: "money-bill-1"
+---
+
+<Tip>
+  This feature is in active development and will be available soon.
+</Tip>
+
+In order to track conversions in your website you will need to add 2 small snippets of code to your website.
+
+
+<Steps>
+  <Step title="Start a Gocertify session">
+    In every page of your website you will need to start a Gocertify session. There is no problem if you call it more than once.
+
+    ```js session
+    gocertify.startSession();
+    ```
+
+    <Info>
+      This snippet will generate a random (and anonymous) session id and store it in the browser's session storage.
+      You might need to ask for consent before adding this snippet to your website.
+    </Info>
+  </Step>
+  <Step title="Track the conversion">
+    In the page after the checkout (the "thank you" page) you will need to track the conversion using this snippet.
+    ```js conversion
+    gocertify.conversion({
+      orderId: orderId,
+      amount: amount,
+      currency: currency,
+      discountCode: discountCode,
+      productsQuantity: productsQuantity
+    })
+    ```
+    Please note that the `orderId`, `amount` and `currency` are required fields. The `discountCode` and `productsQuantity` are optional.
+  </Step>
+</Steps>
