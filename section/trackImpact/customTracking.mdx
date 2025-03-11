@@ -12,8 +12,11 @@ In order to track conversions in your website you will need to add 2 small snipp
 
 
 <Steps>
+  <Step title="Ensure Gocertify.js is implemented site-wide">
+    Ensure you have the Gocertify.js head script implemented site-wide (see [integration guide](/section/gettingStarted/integrateOnSite)).
+  </Step>
   <Step title="Start a Gocertify session">
-    In every page of your website you will need to start a Gocertify session. There is no problem if you call it more than once.
+    To initiate tracking you will need to start a Gocertify session. You can call this function multiple times for a single shopper, so it's often easiest to call this function on `page-view`.
 
     ```js session
     gocertify.startSession();
@@ -21,11 +24,11 @@ In order to track conversions in your website you will need to add 2 small snipp
 
     <Info>
       This snippet will generate a random (and anonymous) session id and store it in the browser's session storage.
-      You might need to ask for consent before adding this snippet to your website.
+      You might need consent from shoppers before calling this function (i.e. add to your cookie consent banner).
     </Info>
   </Step>
   <Step title="Track the conversion">
-    In the page after the checkout (the "thank you" page) you will need to track the conversion using this snippet.
+    In the post-checkout page (the "thank you" page) track the conversion by calling the `conversion` function:
     ```js conversion
     gocertify.conversion({
       orderId: orderId,

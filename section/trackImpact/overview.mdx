@@ -16,7 +16,7 @@ To gain a full picture of your shoppers you will need to implement tracking at t
 
 ### Post Verification Tracking
 Once a shopper has completed a verification flow they will be redirected to a custom link, known as a *tracking link*. Beyond simply redirecting shopper's to a specific page on your website post-verification,
-you can customise this tracking link to pass real-time information about the [user group](/section/buildRewardFlows/closedUserGroups) of that shopper. 
+you can customise this tracking link to pass real-time information about the [user group](/section/buildRewardFlows/closedUserGroups) of that shopper. You can set tracking links up at a brand level or make them unique per campaign.
 
 <Tip>
 If you are using an affiliate network this is also the link you will use to track conversions (see [Affiliate Tracking](/section/trackImpact/affiliateTracking)).
@@ -28,7 +28,7 @@ To gain real-time insights into your shoppers you can use this tracking link to 
 For example, if you are running campaigns for Students, you can store this information in the URL as a query parameter:
 
 ```
-https://example.com/your-page?campaign=student
+https://example.com/your-page?campaign={{verification-type}}
 ```
 
 You can give this parameter any name you want, including as an UTM parameter (i.e. `utm_campaign`). If you push this data to your datalayer you can then use it in real time to segment your shoppers and unlock further personalisation.
