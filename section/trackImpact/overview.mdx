@@ -1,32 +1,56 @@
 ---
 title: Overview
-description: 'Monitor the impact of your campaigns.'
+description: 'Monitor the impact of your reward strategy.'
 ---
 
-The journey of a shopper within Gocertify ends up in the "Tracking link", which in some cases could be an affiliate
-link and in others a custom link you've created.
+Gocertify gives you powerful insights into how your rewards are performing site-wide, helping you
+understand campaign effectiveness, shopper behavior, and identify opportunities for optimisation. You can view these insights in your [self-serve reporting dashboard](/section/trackImpact/reportingDashboard).
 
-One of the simplest ways to track the impact of your campaigns is to use a special query parameter in this Tracking link
-the shopper is sent to after completing their verification, with the details of the campaign or group they
-verified.
+<img src="/images/gocertify-Dashboard.png" alt="Report" style={{borderRadius: '0.5rem'}} />
 
-For example, if you are running campaigns for Students, you can get this information added
-like this:
+## Implementing Tracking
+To gain a full picture of your shoppers you will need to implement tracking at two key stages of the shopper journey:
+
+- **Post-verification** to understand who's visiting your site
+- **Post-conversion** to understand who's purchasing from you
+
+### Post Verification Tracking
+Once a shopper has completed a verification flow they will be redirected to a custom link, known as a *tracking link*. Beyond simply redirecting shopper's to a specific page on your website post-verification,
+you can customise this tracking link to pass real-time information about the [user group](/section/buildRewardFlows/closedUserGroups) of that shopper. 
+
+<Tip>
+If you are using an affiliate network this is also the link you will use to track conversions (see [Affiliate Tracking](/section/trackImpact/affiliateTracking)).
+</Tip>
+
+#### Passing verification type
+To gain real-time insights into your shoppers you can use this tracking link to pass a special query parameter with the details of the campaign or group a shopper was verified with. 
+
+For example, if you are running campaigns for Students, you can store this information in the URL as a query parameter:
 
 ```
 https://example.com/your-page?campaign=student
 ```
 
-This parameter is called `campaign` in the example but it could be any name you want, including an UTM parameter,
-like `utm_campaign`.
+You can give this parameter any name you want, including as an UTM parameter (i.e. `utm_campaign`). If you push this data to your datalayer you can then use it in real time to segment your shoppers and unlock further personalisation.
 
-## Back and forth
+#### Passing Custom Parameters
 
-Sometimes, you might want to pass some information about the session to us and get it back in the Tracking link (think
-about a referral campaign, for example).
+In addition to receiving information about verifications, you can also pass your own data through the verification process 
+and receive it back at the end. This bidirectional data flow is particularly useful for referral campaigns or when you need to maintain session continuity.
+
 
 To do this, we support 2 special parameters, called `subid` and `clickref`. The only difference between the two is
-that `subid` is persisted to the coupon_request, while `clickref` is ephemeral and will only be available in the
+that `subid` is persisted to our verification database, while `clickref` is ephemeral and will only be available in the
 current session.
 
 See how to set them in your landing pages [here](/section/gettingStarted/landingPages).
+
+### Post Conversion Tracking
+
+After a shopper completes a purchase, you need a way to connect that transaction back to the campaign and group they were verified with. Gocertify offers two methods to track these conversions:
+
+- [Affiliate Network Integration](/section/trackImpact/affiliateTracking) for brands using an affiliate network, such as Awin or Rakuten.
+- [Direct Conversion Tracking](/section/trackImpact/conversionTracking) for brands that want to track conversions directly.
+
+
+
