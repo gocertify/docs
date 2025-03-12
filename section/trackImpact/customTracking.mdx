@@ -1,0 +1,43 @@
+---
+title: Direct Conversion Tracking
+description: 'Using a custom tracking script to track your conversions.'
+icon: "person-rays"
+---
+
+<Tip>
+  This feature is in active development and will be available soon.
+</Tip>
+
+In order to track conversions in your website you will need to add 2 small snippets of code to your website.
+
+
+<Steps>
+  <Step title="Ensure Gocertify.js is implemented site-wide">
+    Ensure you have the Gocertify.js head script implemented site-wide (see [integration guide](/section/gettingStarted/integrateOnSite)).
+  </Step>
+  <Step title="Start a Gocertify session">
+    To initiate tracking you will need to start a Gocertify session. You can call this function multiple times for a single shopper, so it's often easiest to call this function on `page-view`.
+
+    ```js session
+    gocertify.startSession();
+    ```
+
+    <Info>
+      This snippet will generate a random (and anonymous) session id and store it in the browser's session storage.
+      You might need consent from shoppers before calling this function (i.e. add to your cookie consent banner).
+    </Info>
+  </Step>
+  <Step title="Track the conversion">
+    In the post-checkout page (the "thank you" page) track the conversion by calling the `conversion` function:
+    ```js conversion
+    gocertify.conversion({
+      orderId: orderId,
+      amount: amount,
+      currency: currency,
+      discountCode: discountCode,
+      productsQuantity: productsQuantity
+    })
+    ```
+    Please note that the `orderId`, `amount` and `currency` are required fields. The `discountCode` and `productsQuantity` are optional.
+  </Step>
+</Steps>
