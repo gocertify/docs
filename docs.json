@@ -68,7 +68,7 @@
             "pages": [
               "section/trackImpact/overview",
               "section/trackImpact/affiliateTracking",
-              "section/trackImpact/customTracking",
+              "section/trackImpact/directTracking",
               "section/trackImpact/report"
             ]
           }
