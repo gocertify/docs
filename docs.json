@@ -67,6 +67,8 @@
             "group": "Track Impact",
             "pages": [
               "section/trackImpact/overview",
+              "section/trackImpact/shopperInsights",
+              "section/trackImpact/transactionTracking",
               "section/trackImpact/affiliateTracking",
               "section/trackImpact/directTracking",
               "section/trackImpact/report"
