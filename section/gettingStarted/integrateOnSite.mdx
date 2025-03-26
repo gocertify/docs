@@ -22,7 +22,7 @@ Integrate Gocertify by adding the following Gocertify <Tooltip tip="Our script i
             el.setAttribute("src", "https://assets.gocertify.me/assets/gocertify.js");
             el.setAttribute("data-brand", "example-company"); //replace example-company with your company name
             el.setAttribute("defer", "true");
-            document.body.appendChild(el);
+            document.head.appendChild(el);
           })();
         </script>
       ```
@@ -53,7 +53,7 @@ Tag managers let you can easily add the Gocertify script site-wide without needi
             var el = document.createElement("script");
             el.setAttribute("src", "https://assets.gocertify.me/assets/gocertify.js");
             el.setAttribute("data-brand", "example-company"); //replace example-company with your company name
-            document.body.appendChild(el);
+            document.head.appendChild(el);
           })();
         </script>
       ```
@@ -148,7 +148,7 @@ Tag managers let you can easily add the Gocertify script site-wide without needi
             el.setAttribute("src", "https://assets.gocertify.me/assets/gocertify.js");
             el.setAttribute("data-brand", "example-company"); //replace example-company with your company name
             el.setAttribute("defer", "true");
-            document.body.appendChild(el);
+            document.head.appendChild(el);
           })();
         </script>
       ```
