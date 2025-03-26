@@ -4,8 +4,92 @@ description: 'Convert shoppers with targeted, gated rewards.'
 icon: 'fa-fw'
 ---
 
-The Gocertify magic link let's you provide secure access to private content or storefronts with the discounts pre-applied. 
+After a successful verification, the shopper will be redirected to your gated 
+content using what we call a **"magic link"**. 
 
+This magic link could include an optional `signature` parameter that will let you validate its
+authenticity, giving you the confidence to provide secure access to private content 
+or storefronts with the discounts pre-applied.
 
-To set up gated content, provide your technical team with a link to this [documentation](/section/buildRewardFlows/gatedContentTechDocumentation).
-Your technical team will set up a secure URL that automatically redirects successfully verified shoppers straight to your gated content.
+<Tip>
+    If you don't need to validate the authenticity of the magic link, then it can simply be the destination URL of your gated content.
+    
+    You don't need to keep reading this section.
+</Tip>
+
+## Requirements for signature validation
+
+You need to ask your Customer Success Manager to set a **Signature Key** to your brand. 
+If you manage more than one brand (one per territory, for example), you will need 
+a different signature key for each brand. 
+
+**Important**: Don't share nor use this signature key in any public-facing code.
+
+## Setup
+
+You will need to build a small page that will act as a proxy between the shopper and the gated content. 
+Gocertify will then use this page as the magic link destination.
+
+When redirecting the shopper to this proxy page, Gocertify will add the following query parameters:
+
+- `signed_token`: A unique identifier of the reward flow (related to the shopper and the specific campaign).
+- `clicktimestamp`: The time (UTC timestamp) when the shopper clicked the magic link.
+- `signature`: The **SHA256** hash of `gocertify{{clicktimestamp}}{{signed_token}}{{signature_key}}`
+
+An example of the full URL would be, assuming the signature key is `1234567890`:
+
+```
+https://your-page.com/proxy?clicktimestamp=20250326143831&signedtoken=af551f61&signature=21a07e72ef34d9546e1f41c56171f2990f5fa083a9f516ee891a394838062eca
+```
+
+## Authenticating the magic link
+
+The proxy page will need to recreate the signature using the same parameters and then confirm it's the same one that was received as query string.
+
+Optionally, you can also validate the `clicktimestamp` is no older than X seconds (10 seconds is a good default).
+
+Here's a sample implementation:
+
+<CodeGroup>
+    ```rb proxy.rb
+        clicktimestamp = params[:clicktimestamp]
+        signed_token = params[:signed_token]
+        signature = params[:signature]
+        signature_key = ENV['GOCERTIFY_SIGNATURE_KEY']
+
+        input = ["gocertify", clicktimestamp, signed_token, signature_key].compact_blank.join
+        computed_signature = Digest::SHA256.hexdigest(input)
+
+        if computed_signature == params[:signature] && clicktimestamp.to_time > 10.seconds.ago
+            # The signature is valid
+        end
+    ```
+    ```php proxy.php
+        $clicktimestamp = $_GET['clicktimestamp'];
+        $signed_token = $_GET['signed_token'];
+        $signature = $_GET['signature'];
+        $signature_key = getenv('GOCERTIFY_SIGNATURE_KEY');
+
+        $input = "gocertify" . $clicktimestamp . $signed_token . $signature_key;
+        $computed_signature = hash('sha256', $input);
+
+        if ($computed_signature == $signature && $clicktimestamp.to_i > time() - 10) {
+            // The signature is valid
+        }
+    ```
+    ```js proxy.js
+        const clicktimestamp = new URLSearchParams(window.location.search).get('clicktimestamp');
+        const signed_token = new URLSearchParams(window.location.search).get('signed_token');
+        const signature = new URLSearchParams(window.location.search).get('signature');
+        const signature_key = ENV['GOCERTIFY_SIGNATURE_KEY'];
+        
+        const input = "gocertify" + clicktimestamp + signed_token + signature_key;
+        const computed_signature = crypto.subtle.digest('SHA-256', new TextEncoder().encode(input))
+            .then(buf => buf.subarray(0, 8).toString('hex'))
+            .then(console.log);
+
+        if (computed_signature == signature && clicktimestamp.to_i > Time.now.to_i - 10) {
+            // The signature is valid
+        }
+    ```
+</CodeGroup>
