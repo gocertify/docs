@@ -68,5 +68,38 @@ You can do this by adding two extra data attributes (`data-purchase-amount` and 
       ```
     </CodeGroup>
   </Accordion>
-
 </AccordionGroup>
+
+## Variables
+
+As mentioned above, by default your placement will include these two variables:
+
+- `{{purchase-amount}}`: The price of the product, in cents (e.g. 1000 for £10).
+- `{{locale}}`: The locale of the page, in ISO 639-1 format (e.g. `en-GB`).
+- `{{currency}}`: The currency of the page, in ISO 4217 format (e.g. `GBP`).
+- `{{savings-amount}}`: The savings amount of the product, calculated automatically based on the original price and the discount in the campaign.
+
+<Tip>
+  The "currency" variable was introduced in April 2025 and is optional. If you don't set it, we will use the currency associated to the locale.
+</Tip>
+
+You can also include custom variables by adding them to the placement. For example, if you want to include the product category, you can set the following call to action:
+
+`==Save {{savings-amount}}== on this {{category}}`
+
+Then, you need to set the value for that variable (as "data attribute") when rendering the placement. For example, if you want to set the category to "Shoes", you can do the following:
+
+```
+<gocertify-placement 
+  id="p-123456" 
+  data-locale="en-GB" 
+  data-purchase-amount="9800" 
+  data-category="Shoes">
+</gocertify-placement>
+```
+
+Asuming that the maximum discount available on the campaigns associated to this placement (p-123456) is 20% off, the savings amount will be automatically calculated as 1960 (9800 * 20%), and the resulting text will be:
+
+> **Save £19.60** on this Shoes
+
+Of course, you will probably want to replace those hardcoded values with variables from your data layer (on Google Tag Manager, for example) or from your CMS.
