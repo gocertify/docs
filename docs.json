@@ -48,12 +48,13 @@
             ]
           },
           {
-            "group": "Promote across Channels",
+            "group": "Promote Across Channels",
             "pages": [
               "section/promoteOffers/overview",
               "section/promoteOffers/on-site-placements",
               "section/promoteOffers/osmVisibility",
               "section/promoteOffers/dynamicText",
+              "section/promoteOffers/advancedTargeting",
               "section/promoteOffers/landingPages",
               "section/promoteOffers/offerHub",
               "section/promoteOffers/linking-to-offers",
