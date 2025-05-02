@@ -1,0 +1,46 @@
+---
+title: Advanced Targeting
+description: 'Advanced system to set the target pages for your offers.'
+icon: 'fa-fw'
+---
+
+<Tip>
+  This feature is available for selected customers. If you want to enable it, please contact your account manager.
+</Tip>
+
+In most cases, the [Visibility toolkit](/section/promoteOffers/osmVisibility) is enough to target the right pages for your offers. However, there are some cases where you need more control over the targeting.
+
+Examples of cases where you need more control over the targeting:
+1. You need to add aditional variables to the placement that are not available in your DataLayer or CMS (e.g. a custom and catchy phrase to some products)
+2. You want to run your offers on certain SKUs or product categories, with no easy way to identify them through the DataLayer or CMS.
+
+# Defining a target
+
+Each target is defined by an "identifier". The first step is for you to decide what identifier you want to use. In most cases, this will be a SKU.
+
+Then, you need to create the placement you want to run your offer. Remember that you can add dynamic text there using [variables](/section/promoteOffers/dynamicText#variables).
+
+Finally, add all the targets you want to run your offer on.
+
+<img src="/images/osm/newAdvancedTargeting.png" alt="Adding a new advanced targeting" style={{ borderRadius: '0.5rem' }} />
+
+Once you select the placement you want to use, all the variables included in its CTA will be displayed in the "Placement variables" section. You will be able to feed all the value for these variables in the "Variable definitions" section.
+
+You can also load multiple targets from a CSV file, by selecting the "Multiple targets" option.
+
+# Triggering the placement
+
+Back in your website, you will need to add a little script to load the current identifier (e.g. loading the SKU from a hidden HTML element or DataLayer) and then trigger the Gocertify placement for that target.
+
+<CodeGroup>
+  ```javascript JS
+  gocertify.setTarget(identifier, cssAnchor);
+  ```
+</CodeGroup>
+
+As you can see, you also have the optional `cssAnchor` parameter. This is the CSS anchor where you want the placement to be displayed (in case it's not defined in the placement).
+
+
+
+
+
