@@ -19,32 +19,32 @@ To start syncing data you'll need to create a new API user and share the details
     <Step title="Access Project Settings">
       Sign in to your [Bloomreach Engagement](https://engagement.bloomreach.com) instance and in the top right corner, click on the settings icon and then “Project settings”.
 
-      <img className="block" src="/images/bloomreachProjectSettings.png" alt="Dotdigital Project Settings" style={{ borderRadius: '0.5rem' }} />
+      <img className="block" src="/images/bloomreach/projectSettings.png" alt="Bloomreach Project Settings" style={{ borderRadius: '0.5rem' }} />
     </Step>
 
     <Step title="Navigate to API Settings">
       In the left sidebar, go to “Access management” and then select “API”.
 
-      <img className="block" src="/images/bloomreachApiSettings.png" alt="Bloomreach API Settings" style={{ borderRadius: '0.5rem' }} />
+      <img className="block" src="/images/bloomreach/apiSettings.png" alt="Bloomreach API Settings" style={{ borderRadius: '0.5rem' }} />
     </Step>
 
     <Step title="Create a new group ">
       In the “API groups” section, open the dropdown selector and choose “+New group”
 
-      <img className="block" src="/images/bloomreachNewApiGroup.png" alt="Bloomreach New API Group" style={{ borderRadius: '0.5rem' }} />
+      <img className="block" src="/images/bloomreach/newApiGroup.png" alt="Bloomreach New API Group" style={{ borderRadius: '0.5rem' }} />
     </Step>
 
     <Step title="Create the Gocertify group">
       In the popup, choose “Private access” and name the group “gocertify” and click on “Create group”. You'll be given a secret key, which you'll need to note down for later.
 
-      <img className="block" src="/images/bloomreachApiGroup.png" alt="Bloomreach API Group" style={{ borderRadius: '0.5rem' }} />
+      <img className="block" src="/images/bloomreach/apiGroup.png" alt="Bloomreach API Group" style={{ borderRadius: '0.5rem' }} />
     </Step>
 
     <Step title="Set the permissions">
       Scroll down to the “Group permissions” section and click on the “Events” tab. Enable the “Set” checkbox next to “New events”.
       This means you will allow us to only “create new type of events”.
 
-      <img className="block" src="/images/bloomreachGroupPermissions.png" alt="Bloomreach Group Permissions" style={{ borderRadius: '0.5rem' }} />
+      <img className="block" src="/images/bloomreach/groupPermissions.png" alt="Bloomreach Group Permissions" style={{ borderRadius: '0.5rem' }} />
 
       <Tip>
         If you already have a “consent” event on that list (under the “Other” section), please enable it too
@@ -57,13 +57,13 @@ To start syncing data you'll need to create a new API user and share the details
     <Step title="Find your Hard ID">
       Find your “Hard ID”. Go to visit any Customer profile in your instance, and take a look at the field name where their email is in. It's typically “registered” or “email_id”. See the example below. In this case, your Hard ID is “registered”:
 
-      <img className="block" src="/images/bloomreachHardID.png" alt="Bloomreach Hard ID" style={{ borderRadius: '0.5rem' }} />
+      <img className="block" src="/images/bloomreach/hardID.png" alt="Bloomreach Hard ID" style={{ borderRadius: '0.5rem' }} />
     </Step>
 
     <Step title="Share the user details with Gocertify">
       Go to onetimesecret.com and paste the credentials there, in this format. Even if it's not required, we encourage you to also add a random “Passphrase”. This will generate a secret link that will expire within 7 days and will be visible only once. Once done, share this link with your Customer Success Manager at Gocertify.
 
-      <img className="block" src="/images/bloomreachOneTimeSecret.png" alt="Onetime Secret" style={{ borderRadius: '0.5rem' }} />
+      <img className="block" src="/images/bloomreach/oneTimeSecret.png" alt="Onetime Secret" style={{ borderRadius: '0.5rem' }} />
 
       ```YAML Credentials placeholder
       Project token: xxxxxxx-xxxxxx-xxxxxx-xxxxxxxxxx
@@ -86,17 +86,17 @@ You will end up having one Contact with 2 events (one for the “consent intent�
 </Tip>
 
 <Frame caption="First Bloomreach Event">
-  <img className="block" src="/images/bloomreachFirstEvent.png" alt="First Bloomreach Event" style={{ borderRadius: '0.5rem' }}/>
+  <img className="block" src="/images/bloomreach/firstEvent.png" alt="First Bloomreach Event" style={{ borderRadius: '0.5rem' }}/>
 </Frame>
 
 Your second event can have two forms, depending on whether the shopper has verified as a group or not.
 
 <Frame caption="Second Bloomreach Event for verified groups">
-  <img className="block" src="/images/bloomreachSecondEventVerified.png" alt="Second Bloomreach Event for verified groups" style={{ borderRadius: '0.5rem' }}/>
+  <img className="block" src="/images/bloomreach/secondEventVerified.png" alt="Second Bloomreach Event for verified groups" style={{ borderRadius: '0.5rem' }}/>
 </Frame>
 
 <Frame caption="For external offers that don't require verification (often included in the OfferHub), the Second request will be slightly different, as it won't include the “group_xxx” keys">
-  <img className="block" src="/images/bloomreachSecondEventOpenOffers.png" alt="Second Bloomreach Event for open offers" style={{ borderRadius: '0.5rem' }}/>
+  <img className="block" src="/images/bloomreach/secondEventOpenOffers.png" alt="Second Bloomreach Event for open offers" style={{ borderRadius: '0.5rem' }}/>
 </Frame>
 
 ### Custom fields
@@ -111,12 +111,44 @@ Additionally, it's also possible to sync one or more of these custom fields to y
   Remember to enable the desired fields under the "Customer properties" section too in the API settings.
 </Tip>
 
+## Consent management
+
+The shopper gives us the consent to share their data with you when they submit their email and/or mobile number
+(there is a legal opt-in process in place).
+
+In the backend, we provide 2 options to manage this consent:
+
+### 1. Explicit Opt-in
+
+We will send the native `consent` event to Bloomreach, so you don't need to do anything else. 
+
+In order to setup this option, you will need to find the `Consent category` in your Bloomreach instance: 
+Go to "Project Settings" >  "Privacy management" > "Consents".
+
+<Frame caption="Project settings > Privacy management > Consents">
+  <img className="block" src="/images/bloomreach/consentManagement.png" alt="Project settings > Privacy management > Consents" style={{ borderRadius: '0.5rem' }}/>
+</Frame>
+
+Chose the one you want us to use and send it to your Customer Success Manager at Gocertify.
+
+**Important:** Make sure you gave access to this `consent` event in the API settings.
+
+### 2. Implicit Opt-in
+
+We will send a custom `gocertify` event, with the consent details, to Bloomreach.
+
+This event won't perform any action related to the consent in your Bloomreach instance. 
+
+You will need to create an automation in your instance to perform any action based on this event. You can regonise this event by the `state` attribute, 
+which will be `consent-intent`.
+
+
 ## How to create segments in Bloomreach
 
 You can build segments based on the Custom Events we have sent to your account, by going to “Customers” and then creating filters, like the one below:
 
 <Frame caption="Bloomreach Filters">
-  <img className="block" src="/images/bloomreachFilters.png" alt="Bloomreach Filters" style={{ borderRadius: '0.5rem' }}/>
+  <img className="block" src="/images/bloomreach/filters.png" alt="Bloomreach Filters" style={{ borderRadius: '0.5rem' }}/>
 </Frame>
 
 You can use the “state” attribute to filter all the Customers that have given you consent for marketing or the ones that are verified as a group or simply claimed an offer.
