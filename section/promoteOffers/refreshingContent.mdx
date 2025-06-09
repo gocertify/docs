@@ -1,0 +1,53 @@
+---
+title: Refreshing content
+description: 'How to refresh dynamically the content of your placements.'
+icon: 'fa-fw'
+---
+
+<Tip>
+  Can shoppers choose different variants of your products, changing the price of the product? You will need to use this feature.
+</Tip>
+
+If you have a product that can be purchased in different variants, you will need to refresh the content of your placements dynamically each time the shopper changes the variant.
+
+Our placements offer a simple way to refresh the content of your placements: Simply update the relevant data attribute of the placement (`data-purchase-amount`).
+
+You can do it with this little snippet of JavaScript:
+
+<CodeGroup>
+  ```javascript JS
+  document.querySelectorAll('gocertify-placement').forEach(e => {
+    e.setAttribute("data-purchase-amount", newPurchaseAmount);
+  });
+  ```
+</CodeGroup>
+
+<Tip>
+  Remember to replace the `newPurchaseAmount` with the actual value you want to set, in the same format as the one you set in the placement.
+</Tip>
+
+Our placements will automatically refresh the content of the placement when the `data-purchase-amount` data attribute is updated. 
+If you are also using custom variables in your placements, you will need to update them and then trigger the refresh manually, using the `refresh` function. 
+For example, let's say you are using the `category` variable in your placement, and you want to refresh the placement when the shopper changes the category:
+
+<CodeGroup>
+  ```javascript JS
+  document.querySelectorAll('gocertify-placement').forEach(e => {
+    e.setAttribute("data-category", newCategory);
+    e.refresh();
+  });
+  ```
+</CodeGroup>
+
+Of course, if you have the `id` of the specific placement you want to refresh, you can do it with a single line of JavaScript:
+
+<CodeGroup>
+  ```javascript JS
+  let placement = document.getElementById('p-123456');
+  placement.setAttribute("data-category", newCategory);
+  placement.refresh();
+  ```
+</CodeGroup>
+
+
+
