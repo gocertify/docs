@@ -159,32 +159,4 @@ Tag managers let you can easily add the Gocertify script site-wide without needi
 
 </AccordionGroup>
 
-## Integrate in-app
-To integrate Gocertify in-app, you will need to create a WebView in your mobile app and link it to our hosted frame. This will open the verification flow within your app.
 
-
-<Steps>
-  1. **Create a WebView in your mobile app**  
-     Add a WebView component that links to the hosted iFrame (e.g., `https://secure.gocertify.me/at/your-brand/student-in-app`). This will open the verification flow within your app.
-  
-  2. **Coordinate redirect URLs**  
-     Work with your Gocertify account manager to establish the specific redirect URL that will be used after verification is complete. We can pass parameters in this URL that you can catch and use later in your app.
-  
-  3. **Handle verification completion**  
-     When the user completes verification, we'll redirect them to the agreed URL with any necessary parameters. Your app should detect this redirect, close the WebView, and proceed with the appropriate actions.
-     ```javascript
-     // Example code for monitoring WebView URLs (Android)
-     webView.setWebViewClient(new WebViewClient() {
-       @Override
-       public boolean shouldOverrideUrlLoading(WebView view, String url) {
-         if (url.contains("your-agreed-callback-url")) {
-           // Extract parameters if needed
-           // Close the WebView
-           // Continue with your app flow
-           return true;
-         }
-         return false;
-       }
-     });
-     ```
-</Steps>
