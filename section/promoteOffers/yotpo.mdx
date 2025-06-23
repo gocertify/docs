@@ -1,0 +1,75 @@
+---
+title: 'Yotpo'
+description: 'Start building loyal communities with targeted, gated offers'
+icon: 'fa-fw'
+---
+
+With Gocertify's Yotpo Integration you can reward your users with points when they verify as a member of a target group (Students, Key Workers, etc).
+
+When you connect your Gocertify campaigns to your Yotpo account, we can communicate directly with Yotpo and trigger "Custom Actions" that award points to verified users automatically.
+
+## How It Works
+<Steps>
+1. Add a link to your Gocertify campaign on your user's account dashboard with a CTA like "Earn XX extra points by verifying as a Student"
+2. When users click the link, they're directed to the Gocertify verification flow
+3. During verification, Gocertify collects the user's email address
+4. Upon successful verification, Gocertify triggers a Custom Action in Yotpo that adds points to the user's account
+</Steps>
+
+
+## Requirements to go live
+
+You'll need to create a separate "Earning Rule" (of type "Custom Action") in Yotpo for each Gocertify campaign. Each Earning Rule connects to a specific campaign through its "Action Name".
+
+
+
+<Accordion title="See step by step tutorial">
+  <Steps>
+    <Step title="Create a new Earning Rule">
+      Sign in to your [Yotpo](https://loyalty-app.yotpo.com/) account and go to the "Earning Rules" section, located in the left sidebar, under "Manage Program".
+
+      Once there, click on the "Create Earning Rule" button.
+
+      <img className="block" src="/images/yotpo/createEarningRule.png" alt="Yotpo Create Earning Rule" style={{ borderRadius: '0.5rem' }} />
+    </Step>
+
+    <Step title="Select Custom Action">
+      Scroll down to the bottom of the page and select "Custom Action"
+    </Step>
+
+    <Step title="Configure the Custom Action">
+      Start by setting the "Action Name" to the name of the campaign you want to connect to this Earning Rule. This name must start with `gocertify-` and then the internal name of the campaign (that your CSM will provide), for example `gocertify-students`.
+
+      <img className="block" src="/images/yotpo/customActionForm.png" alt="Yotpo Configure Custom Action" style={{ borderRadius: '0.5rem' }} />
+
+      Set the "How many points" value to the number of points you want to reward for this campaign.
+
+      Make sure you set the "Maximum Times Completed Total" field to "No maximum".
+
+      <Tip>
+        Repeat this process for each campaign you want to connect to Yotpo (Students, Key Workers, etc). Your CSM will provide the exact Action Name for each campaign.
+      </Tip>
+
+    </Step>
+
+    <Step title="Share the API credentials with Gocertify">
+      In the left side menu, go to "Settings" and then "General Settings".
+
+      You will find many fields there. You will need to share 2 of them:
+      - API Key
+      - GUID
+
+      Please share those values with your Gocertify account manager, using [OneTimeSecret](https://onetimesecret.com/) to avoid exposing it in the chat.
+    </Step>
+  </Steps>
+</Accordion>
+
+## How data will appear in Yotpo
+
+After successful verification, you'll see the points awarded in the customer's "Earning History" section:
+
+<img className="block" src="/images/yotpo/earningHistory.png" alt="Yotpo Earning History" style={{ borderRadius: '0.5rem' }} />
+
+<Tip title="Important">
+  The user must use the same email address for Gocertify verification that they use in your store/portal. Otherwise, Yotpo will create a separate customer record instead of adding points to their existing account.
+</Tip>
