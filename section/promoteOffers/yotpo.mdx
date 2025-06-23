@@ -1,24 +1,25 @@
 ---
 title: 'Yotpo'
-description: 'Activate new "Earning Rules" in Yotpo to reward your user closed groups'
+description: 'Start building loyal communities with targeted, gated offers'
 icon: 'fa-fw'
 ---
 
-Give some extra points to your users when they verify as a target group (Students, Key Workers, etc).
+With Gocertify's Yotpo Integration you can reward your users with points when they verify as a member of a target group (Students, Key Workers, etc).
 
-You can connect one or more campaigns at Gocertify to your Yotpo account, so we can communicate internally with Yotpo and trigger some "Custom Actions" (that you configure in your Yotpo dashboard) to reward your users.
+When you connect your Gocertify campaigns to your Yotpo account, we can communicate directly with Yotpo and trigger "Custom Actions" that award points to verified users automatically.
 
-The typical use case is to add a link to your special Gocertify campaign in your user's account dashboard, with a CTA "Earn XX extra points by verifying as a Student".
-
-When the user clicks on the link, they will be redirected to the Gocertify campaign, where they can verify as a Student.
-
-While verifying we will ask them for their email address. and once they verify, we will trigger a "Custom Action" in Yotpo, that will add the extra points to their account.
+## How It Works
+<Steps>
+1. Add a link to your Gocertify campaign on your user's account dashboard with a CTA like "Earn XX extra points by verifying as a Student"
+2. When users click the link, they're directed to the Gocertify verification flow
+3. During verification, Gocertify collects the user's email address
+4. Upon successful verification, Gocertify triggers a Custom Action in Yotpo that adds points to the user's account
+</Steps>
 
 
 ## Requirements to go live
 
-In a nutshell, you will need to create as many "Earning Rules" (of type "Custom Action") in Yotpo as you have campaigns at Gocertify. 
-Each "Earning Rule" will be connected to a specific campaign, by its "Action Name".
+You'll need to create a separate "Earning Rule" (of type "Custom Action") in Yotpo for each Gocertify campaign. Each Earning Rule connects to a specific campaign through its "Action Name".
 
 
 
@@ -65,8 +66,10 @@ Each "Earning Rule" will be connected to a specific campaign, by its "Action Nam
 
 ## How data will appear in Yotpo
 
-When checking your "Customers" section, you will find a new item in the "Earning History" section, as follows:
+After successful verification, you'll see the points awarded in the customer's "Earning History" section:
 
 <img className="block" src="/images/yotpo/earningHistory.png" alt="Yotpo Earning History" style={{ borderRadius: '0.5rem' }} />
 
-It's important to note that the user needs to use the exact email address they use in your portal during their verification with Gocertify. Otherwhise, you will see a new Customer in Yotpo.
+<Tip title="Important">
+  The user must use the same email address for Gocertify verification that they use in your store/portal. Otherwise, Yotpo will create a separate customer record instead of adding points to their existing account.
+</Tip>
