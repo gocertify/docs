@@ -90,6 +90,17 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "🔗 Integrations",
+        "groups": [
+          {
+            "group": "Platform Integrations",
+            "pages": [
+              "section/integrations/overview"
+            ]
+          }
+        ]
       }
     ],
     "global": {

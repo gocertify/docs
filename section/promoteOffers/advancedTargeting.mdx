@@ -5,20 +5,20 @@ icon: 'fa-fw'
 ---
 
 <Tip>
-  This feature is available for selected customers. If you want to enable it, please contact your account manager.
+  This feature is an enterprise feature. If you want to enable it, please contact your account manager.
 </Tip>
 
 In most cases, the [Visibility toolkit](/section/promoteOffers/osmVisibility) is enough to target the right pages for your offers. However, there are some cases where you need more control over the targeting.
 
-Examples of cases where you need more control over the targeting:
-1. You need to add aditional variables to the placement that are not available in your DataLayer or CMS (e.g. a custom and catchy phrase to some products)
-2. You want to run your offers on certain SKUs or product categories, with no easy way to identify them through the DataLayer or CMS.
+Consider using advanced targeting when:
+1. You need to add aditional variables to the placement that are not available in your DataLayer or CMS (e.g. custom promotional phrases for specific products)
+2. You want to display offers for particular SKUs or product categories that can't be easily identified through standard DataLayer or CMS parameters.
 
 # Defining a target
 
 Each target is defined by an "identifier". The first step is for you to decide what identifier you want to use. In most cases, this will be a SKU.
 
-Then, you need to create the placement you want to run your offer. Remember that you can add dynamic text there using [variables](/section/promoteOffers/dynamicText#variables).
+Then, you need to create the placement you want to run your offer. Remember that you make your messaging more engaging by adding dynamic text using [variables](/section/promoteOffers/dynamicText#variables).
 
 Finally, add all the targets you want to run your offer on.
 
@@ -30,7 +30,7 @@ You can also load multiple targets from a CSV file, by selecting the "Multiple t
 
 # Triggering the placement
 
-Back in your website, you will need to add a little script to load the current identifier (e.g. loading the SKU from a hidden HTML element or DataLayer) and then trigger the Gocertify placement for that target.
+Back in your website, you will need to add a small script to load the current identifier (e.g. loading the SKU from a hidden HTML element or DataLayer) and then trigger the Gocertify placement for that target.
 
 <CodeGroup>
   ```javascript JS
@@ -38,7 +38,7 @@ Back in your website, you will need to add a little script to load the current i
   ```
 </CodeGroup>
 
-As you can see, you also have the optional `cssAnchor` parameter. This is the CSS anchor where you want the placement to be displayed (in case it's not defined in the placement).
+You can also use the optional `cssAnchor` parameter. This is the CSS anchor where you want the placement to be displayed (in case it's not defined in the placement).
 
 
 
