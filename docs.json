@@ -20,6 +20,7 @@
               "section/gettingStarted/quickStart",
               "section/gettingStarted/integrateOnSite",
               "section/gettingStarted/integrateInApp",
+              "section/gettingStarted/integrateInStore",
               "section/gettingStarted/landingPages",
               "section/gettingStarted/customiseBranding",
               "section/gettingStarted/upgradeGuide"
@@ -61,7 +62,6 @@
               "section/promoteOffers/offerHub",
               "section/promoteOffers/linking-to-offers",
               "section/promoteOffers/popups",
-              "section/promoteOffers/inStore",
               "section/promoteOffers/cxpIntegrations",
               "section/promoteOffers/loyaltyIntegrations",
               "section/promoteOffers/shopifyIntegration"
