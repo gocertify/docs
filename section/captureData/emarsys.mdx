@@ -6,7 +6,7 @@ icon: "fa-fw"
 
 Once the user submits their email and/or mobile number, Gocertify will send this data your Emarsys account, creating (or updating) a _Contact_, with the “Opt-in” field set as `True`. Gocertify will also trigger an _External Event_ called `gocertify_consent_intent`, which can be used to create automations.
 
-After that screen, when the user successfully verifies as a target group (student, healthcare, senior, etc), Gocertify will update the Contact, setting a new field called “gocertify*student_verified_at” with the current date, useful to generate \_Segments*.
+After that screen, when the user successfully verifies as a target group (student, healthcare, senior, etc), Gocertify will update the Contact, setting a new field called “gocertify*student_verified_at” with the current date, useful to generate _Segments_.
 Gocertify will also trigger another External Event called `gocertify_offer_claimed`, that can be used to initiate another automation.
 
 ## Requirements to go live
