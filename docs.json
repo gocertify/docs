@@ -18,6 +18,7 @@
             "pages": [
               "section/gettingStarted/overview",
               "section/gettingStarted/quickStart",
+              "section/gettingStarted/dashboardAccess",
               "section/gettingStarted/integrateOnSite",
               "section/gettingStarted/integrateInApp",
               "section/gettingStarted/integrateInStore",

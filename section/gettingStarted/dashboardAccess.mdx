@@ -1,0 +1,171 @@
+---
+title: 'Platform Overview'
+description: 'Your central hub for managing rewards, viewing analytics, and configuring promotions'
+icon: 'rocket'
+---
+<img src="/images/changelog/Dashboard.png" alt="Fresh Dashboard Design" width="100%" style={{ borderRadius: '0.5rem' }} />
+
+## Your Reward Management Platform.
+
+The [Gocertify dashboard](https://secure.gocertify.me/dashboard) is your central hub for managing reward campaigns, viewing shopper analytics, and configuring your promotions. Access is secured through password-based authentication with enforced two-factor authentication (2FA) to protect your campaigns and data.
+
+**What you can do in the dashboard:**
+- View real-time shopper engagement reports and analytics
+- Download CSV exports of verification data
+- Configure on-site messages
+- Manage team access and permissions
+
+
+## Authentication Methods
+
+Access to the Gocertify platform is secured with:
+
+- **Password-Based Login:** Users create and manage their own passwords, reducing the risk of magic-link–related issues (such as intercepted or expired links).
+- **Single Sign-On (SSO):** Login via Microsoft 365 or Google for seamless access.
+- **Enforced Two-Factor Authentication (2FA):** All logins require a one-time code sent to your registered email address.
+- **Secure Session Management:** Each login requires both a valid password and a fresh 2FA code.
+
+## Account Management
+
+<AccordionGroup>
+  <Accordion icon="arrow-right-to-bracket" title="Logging In">
+    Navigate to the [login screen](https://secure.gocertify.me/dashboard/login) to access your dashboard. Gocertify supports:
+    - Email/Password login
+    - SSO login Microsoft 365 or Google
+
+    <Frame>
+      <img src="/images/dashboard/dashboardAccess/logIn/loginScreen.png" alt="Login Screen" style={{ borderRadius: '0.5rem' }} />
+    </Frame>
+  </Accordion>
+
+  <Accordion icon="key" title="SSO Login (Microsoft 365 or Google)">
+    <Steps>
+      <Step title="Select your SSO provider">
+        Select your SSO provider from the list of available providers. The email you've been invited with must be managed by that SSO provider.
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/logIn/SSO-login.png" alt="SSO Login" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+      <Step title="Select your account">
+        Select the account you want to login with from the list of available accounts. This must be the same email you've been invited with.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion icon="envelope" title="Email/Password Login">
+    <Steps>
+      <Step title="Enter your email and password">
+        Input the email that you've been invited with and your password.
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/logIn/email-password-login.png" alt="Email Password Login" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+      <Step title="Retrieve your 2FA code from email">
+        You will receive an email with a 2FA code. If you don't see it, check your spam folder or resend the code.
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/2FA/email2FA.png" alt="2FA Email" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+      <Step title="Enter your 2FA code">
+        Navigate back to the login screen and enter the 2FA code.
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/2FA/enter2FA.png" alt="Enter 2FA Code" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion icon="lock-keyhole" title="Password Reset">
+    To reset your password, or for users who joined Gocertify before we migrated from magic link to password login, you can reset your password via the [login screen](https://secure.gocertify.me/dashboard/login) or directly from the [forgotten password](https://secure.gocertify.me/dashboard/password_reset/new) screen.
+
+    <Steps>
+      <Step title="Select 'Don't have your password?'">
+        In the login screen select "Don't have your password?"
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/passwordReset/passwordReset.png" alt="Password Reset" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+      <Step title="Enter your email">
+        Enter your email address and select "Request a new password"
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/passwordReset/resetPasswordEmailInput.png" alt="Reset Password Email Input" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+      <Step title="Check for password reset email">
+        You will receive confirmation that the email has been sent. If you don't receive it, check your spam or select "Haven't received an email?"
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/passwordReset/resetPasswordEmailSent.png" alt="Reset Password Email Sent" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+      <Step title="Click 'Reset my Password' in the email">
+        In the email you received, click "Reset my Password" to open the password reset page.
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/passwordReset/resetPasswordEmail.png" alt="Reset Password Email" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+      <Step title="Enter your new password">
+        A new tab will open and you can enter your new password. It must meet the validation requirements. Each requirement will turn into a green checkmark when met.
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/passwordReset/resetPasswordInput.png" alt="Reset Password Input" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+      <Step title="Password change confirmation">
+        The page will update to confirm that your password has been changed and after 5 seconds you will be redirected to the login screen.
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/passwordReset/passwordChangedScreen.png" alt="Password Changed Screen" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+      <Step title="Login with your new password">
+        You can now login with your new password.
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/logIn/email-password-login.png" alt="Email Password Login" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion icon="link" title="Linking SSO and Password Accounts">
+    If you have previously logged in with email/password, but now want to login with SSO, you can link your accounts by simply using SSO to login with the same email.
+
+    There is also a path for doing this via profile settings:
+
+    <Steps>
+      <Step title="View your profile settings">
+        Click on your profile card and select "View Profile".
+        <Frame>
+          <img src="/images/dashboard/navigation/viewProfileSettings.png" alt="View Profile Settings" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+      <Step title="Navigate to account security settings">
+        Select "Security" from the sidebar menu.
+        <Frame>
+          <img src="/images/dashboard/navigation/accountSecuritySettings.png" alt="Account Security Settings" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+      <Step title="Link your accounts">
+        Under the "Connected accounts" section it will say "No connected account" and prompt you to logout and then login with SSO.
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/linkAccounts/noLinkedAccount.png" alt="No Linked Account" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+      <Step title="Linked account confirmation">
+        Once this has been done successfully, it will say "Google/Microsoft account connected" and you can now login with SSO. If you want to disconnect the account, you can do so by clicking the "Disconnect" button.
+        <Frame>
+          <img src="/images/dashboard/dashboardAccess/linkAccounts/linkedAccount.png" alt="Linked Account" style={{ borderRadius: '0.5rem' }} />
+        </Frame>
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion icon="arrow-right-from-bracket" title="Logging Out">
+    To logout, click your profile card and select "Logout".
+
+    <Frame>
+      <img src="/images/dashboard/dashboardAccess/logout/dashboardLogout.png" alt="Dashboard Logout" style={{ borderRadius: '0.5rem' }} />
+    </Frame>
+  </Accordion>
+</AccordionGroup>
+
+## Need Help?
+
+If you're having trouble accessing your dashboard, please reach out to [partners@gocertify.me](mailto:partners@gocertify.me) for assistance.
