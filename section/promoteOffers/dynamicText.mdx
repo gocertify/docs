@@ -7,7 +7,7 @@ icon: 'fa-fw'
 Gocertify makes it easy to display dynamic variables in your on site messages. This is especially powerful when used to display the exact saving amount shoppers will receive for a given product item, driving higher conversion rates.
 
 
-<img src="/images/OSM-cta.png" alt="Dynamic Text" style={{ borderRadius: '0.5rem' }} />
+<img src="/images/osm/OSM-cta.png" alt="Dynamic Text" style={{ borderRadius: '0.5rem' }} />
 
 To enable this feature, you need to let Gocertify know a bit more about the page where the placement is
 being displayed. Specifically, we need to know the price and the currency of the product that is being displayed.
@@ -29,7 +29,7 @@ You can do this by adding two extra data attributes (`data-purchase-amount` and 
       <Step title="Identify Variable Name">
         Navigate to the variable tab in [tag manager](https://tagmanager.google.com/#) and identify/create the variable that contains product price and note the name.
         To use the variable you'll need to replace the spaces with underscores so `Product Price` would be `product_price`.
-        <img src="/images/GTM-variables.png" alt="GTM Variables" style={{ borderRadius: '0.5rem' }} />
+        <img src="/images/other/GTM-variables.png" alt="GTM Variables" style={{ borderRadius: '0.5rem' }} />
       </Step>
         <Step title="Add New Line to Head Script">
         Navigate back to the Gocertify head script within the tags section and add a new line using the format `el.setAttribute('data-purchase-amount', '{{variable_name}}');` and the variable name you noted in the previous step.
@@ -38,11 +38,11 @@ You can do this by adding two extra data attributes (`data-purchase-amount` and 
           Remember that the price should be set in cents, so you should need to parse that value to float and multiply it by 100.
           For example, `el.setAttribute('data-purchase-amount', parseFloat({{variable_name}}) * 100);`
         </Tip>
-        <img src="/images/GTM-tag-variable.png" alt="GTM Head Script" style={{ borderRadius: '0.5rem' }} />
+        <img src="/images/other/GTM-tag-variable.png" alt="GTM Head Script" style={{ borderRadius: '0.5rem' }} />
       </Step>
       <Step title="Save and Publish">
         Save and publish your changes. You should now see dynamic text in your on site messages.
-        <img src="/images/GTM-publish.png" alt="GTM Publish" style={{ borderRadius: '0.5rem' }} />
+        <img src="/images/other/GTM-publish.png" alt="GTM Publish" style={{ borderRadius: '0.5rem' }} />
       </Step>
     </Steps>
   </Accordion>
