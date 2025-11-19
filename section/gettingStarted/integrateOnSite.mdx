@@ -8,17 +8,37 @@ import LightweightScript from '/snippets/lightweight-script.mdx';
 
 
 ## Integrate on-site
-
-Integrate Gocertify by adding the following Gocertify <Tooltip tip="Our script is just 12kb and optimised for performance">script</Tooltip> to your site's `<head>` using either a tag manager (no developer needed) or manually pasting it in (basic HTML knowledge recommended). The setup takes less than 2 minutes!
-
-<Tip>
-  Remember to replace `example-company` with your actual company name in the script below.
-</Tip>
 <Tip>
   Make sure the script is implemented site-wide to access all our features.
 </Tip>
+Integrate Gocertify by adding the Gocertify <Tooltip tip="Our script is just 12kb and optimised for performance">script</Tooltip> to your site's `<head>` using either a tag manager (no developer needed) or manually pasting it in (basic HTML knowledge recommended). The setup takes less than 2 minutes!
 
-```javascript gocertify-script
+{/* <Tip>
+  Remember to replace `example-company` with your actual company name in the script below.
+</Tip> */}
+
+
+{/* ```javascript gocertify-script
+        <script>
+          (function() {
+            var el = document.createElement("script");
+            el.setAttribute("src", "https://assets.gocertify.me/assets/gocertify.js");
+            el.setAttribute("data-brand", "example-company"); //replace example-company with your company name
+            el.setAttribute("defer", "true");
+            document.head.appendChild(el);
+          })();
+        </script>
+``` */}
+
+
+You can use any **one** of the following methods to add the Gocertify script to your site. You only need to add the script **once** to your site. Pick your preferred method below and follow the steps.
+
+<AccordionGroup>
+
+<Accordion icon="rectangle-terminal" title="Manually Add script to head">
+
+  Copy and paste the Gocertify script into the `<head>` of your site. Remember to replace `example-company` with your actual company name.
+  ```javascript gocertify-script
         <script>
           (function() {
             var el = document.createElement("script");
@@ -29,14 +49,66 @@ Integrate Gocertify by adding the following Gocertify <Tooltip tip="Our script i
           })();
         </script>
       ```
-<Tip>
-  If you encounter the error `Refused to load the script 'https://assets.gocertify.me/assets/gocertify.js'` due to Content Security Policy violations, add this domain to your CSP whitelist to resolve the issue.
-</Tip>
+  <Info>
+    **Note**: If you cannot add the script to the `<head>` of your site you can place it in the `<body>` .
+  </Info>
+</Accordion>
 
-### Option 1: Use tag manager (no dev required)
-Tag managers let you can easily add the Gocertify script site-wide without needing a developer. Pick your prefered manager to see how it's done.
+<Accordion icon="shopify" title="Shopify">
 
-<AccordionGroup>
+    <Steps>
+    <Step title="Navigate to the Shopify app">
+        Navigate to our [Shopify app](https://apps.shopify.com/gocertify).
+      </Step>
+      <Step title="Install the app">
+        Install the app by clicking `Install`.
+        <Frame>
+          <img src="/images/integrations/ecommerce/shopify/shopify-install-screen1.png" alt="Shopify install screen" />
+        </Frame>
+      </Step>
+      <Step title="Connect to your brand">
+        Once installed, you will see the app appear in your left side menu. Click on the app and you will be asked to connect to your Gocertify brand by clicking `Connect`.
+        <Frame>
+          <img src="/images/integrations/ecommerce/shopify/shopify-connect-screen1.png" alt="Shopify connect screen" />
+        </Frame>
+      </Step>
+      <Step title="Select your brand">
+        You will be presented with a list of brands you have access to. Select the brand you want to connect the app to. If you cannot see your brand, please contact your Gocertify account manager.
+        <Frame>
+          <img src="/images/integrations/ecommerce/shopify/shopify-connect-screen2.png" alt="Shopify connect screen" />
+        </Frame>
+      </Step>
+      <Step title="Navigate to the embed page">
+        Once successfully connected you will see a success message and a button asking you to `Enable the script`. Click this button to navigate to the embed page.
+        <Frame>
+          <img src="/images/integrations/ecommerce/shopify/shopify-enablescript-screen1.png" alt="Shopify connect screen" />
+        </Frame>
+      </Step>
+      <Step title="Enable your embed script">
+        Click the toggle to enable the embed script. The Gocertify head script is now enabled and added to your site.
+        <Frame>
+          <img src="/images/integrations/ecommerce/shopify/shopify-enablescript-screen2.png" alt="Shopify connect screen" />
+        </Frame>
+      </Step>
+      <Step title="Add on-site messaging">
+        Once you have enabled the embed script, you can use Shopify Blocks to add on-site messaging to your site.
+        <Frame>
+          <iframe
+            src="https://www.loom.com/embed/f0751b810299485c958d8412c872ded8?sid=c34ab8ef-9432-4dc6-a7bb-6f16f96dda90"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+            style={{ width: '100%', height: '400px' }}
+          ></iframe>
+        </Frame>
+      </Step>
+    </Steps>
+  </Accordion>
+
+  
+
+
   <Accordion icon="tag" title="Google Tag Manager">
   Watch our [tutorial video](https://www.loom.com/share/c71c832b378e4e17b6aa80a6bcc284a7?sid=9604726f-f6e8-4997-bf66-9a11773773d2) or follow these steps.
 
@@ -95,84 +167,13 @@ Tag managers let you can easily add the Gocertify script site-wide without needi
     </Steps>
   </Accordion>
 
-  <Accordion icon="shopify" title="Shopify">
-
-    <Steps>
-    <Step title="Navigate to the Shopify app">
-        Navigate to our [Shopify app](https://apps.shopify.com/gocertify).
-      </Step>
-      <Step title="Install the app">
-        Install the app by clicking `Install`.
-        <Frame>
-          <img src="/images/integrations/ecommerce/shopify/shopify-install-screen1.png" alt="Shopify install screen" />
-        </Frame>
-      </Step>
-      <Step title="Connect to your brand">
-        Once installed, you will see the app appear in your left side menu. Click on the app and you will be asked to connect to your Gocertify brand by clicking `Connect`.
-        <Frame>
-          <img src="/images/integrations/ecommerce/shopify/shopify-connect-screen1.png" alt="Shopify connect screen" />
-        </Frame>
-      </Step>
-      <Step title="Select your brand">
-        You will be presented with a list of brands you have access to. Select the brand you want to connect the app to. If you cannot see your brand, please contact your Gocertify account manager.
-        <Frame>
-          <img src="/images/integrations/ecommerce/shopify/shopify-connect-screen2.png" alt="Shopify connect screen" />
-        </Frame>
-      </Step>
-      <Step title="Navigate to the embed page">
-        Once successfully connected you will see a success message and a button asking you to `Enable the script`. Click this button to navigate to the embed page.
-        <Frame>
-          <img src="/images/integrations/ecommerce/shopify/shopify-enablescript-screen1.png" alt="Shopify connect screen" />
-        </Frame>
-      </Step>
-      <Step title="Enable your embed script">
-        Click the toggle to enable the embed script. The Gocertify head script is now enabled and added to your site.
-        <Frame>
-          <img src="/images/integrations/ecommerce/shopify/shopify-enablescript-screen2.png" alt="Shopify connect screen" />
-        </Frame>
-      </Step>
-      <Step title="Add on-site messaging">
-        Once you have enabled the embed script, you can use Shopify Blocks to add on-site messaging to your site.
-        <Frame>
-          <iframe
-            src="https://www.loom.com/embed/f0751b810299485c958d8412c872ded8?sid=c34ab8ef-9432-4dc6-a7bb-6f16f96dda90"
-            frameborder="0"
-            webkitallowfullscreen
-            mozallowfullscreen
-            allowfullscreen
-            style={{ width: '100%', height: '400px' }}
-          ></iframe>
-        </Frame>
-      </Step>
-    </Steps>
-  </Accordion>
+  
 
 
 </AccordionGroup>
 
-### Option 2: Manually add script
-
-<AccordionGroup>
-
-<Accordion icon="rectangle-terminal" title="Add script to head">
-
-  Copy and paste the Gocertify script into the `<head>` of your site. Remember to replace `example-company` with your actual company name.
-  ```javascript gocertify-script
-        <script>
-          (function() {
-            var el = document.createElement("script");
-            el.setAttribute("src", "https://assets.gocertify.me/assets/gocertify.js");
-            el.setAttribute("data-brand", "example-company"); //replace example-company with your company name
-            el.setAttribute("defer", "true");
-            document.head.appendChild(el);
-          })();
-        </script>
-      ```
-  <Info>
-    **Note**: If you cannot add the script to the `<head>` of your site you can place it in the `<body>` .
-  </Info>
-</Accordion>
-
-</AccordionGroup>
 
 
+<Tip>
+  If you encounter the error `Refused to load the script 'https://assets.gocertify.me/assets/gocertify.js'` due to Content Security Policy violations, add this domain to your CSP whitelist to resolve the issue.
+</Tip>
