@@ -102,6 +102,18 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "🔧 Internal Tools",
+        "groups": [
+          {
+            "group": "Tools",
+            "pages": [
+              "section/tools/overview",
+              "section/tools/claude"
+            ]
+          }
+        ]
       }
     ],
     "global": {

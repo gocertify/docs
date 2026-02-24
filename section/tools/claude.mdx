@@ -1,0 +1,139 @@
+---
+title: Claude AI Assistant
+description: 'Set up Claude Projects with Gocertify documentation for more intelligent and tailored AI responses'
+icon: "robot"
+---
+
+## Overview
+
+[Claude](https://claude.ai) is an AI assistant that can help with research, analysis, and answering questions about Gocertify. By connecting our documentation repositories to a Claude Project, you can get much more intelligent and contextually aware responses.
+
+<Note>
+  This guide is for **paid Claude accounts** only. Free accounts cannot connect to GitHub repositories, and importantly, paid accounts ensure Claude does not train on our data.
+</Note>
+
+## Setting Up a Claude Project
+
+### Step 1: Create a New Project
+
+1. Go to [claude.ai](https://claude.ai) and sign in to your account
+2. Navigate to the **Projects** section in the sidebar
+3. Click **Create Project** and name it (e.g., "Gocertify")
+
+### Step 2: Connect GitHub Repositories
+
+1. Go to **Settings > Connectors** and ensure GitHub is connected
+2. In your project, add the following repositories as context:
+
+<CardGroup cols={2}>
+  <Card title="Internal Wiki" icon="book">
+    Connect the internal documentation wiki for company knowledge and processes
+  </Card>
+  <Card title="External Docs" icon="file-lines">
+    Connect this documentation repository for product and integration information
+  </Card>
+</CardGroup>
+
+### Step 3: Select Relevant Directories
+
+When adding repositories, select specific directories rather than entire repos for better context:
+
+**For the Documentation Repository:**
+- `src/content` - Contains all the markdown documentation content
+
+**For Data Documentation:**
+- Focus on BigQuery data documentation if working with data queries
+- Include relevant JSON data files for detailed information
+
+<Tip>
+  Being selective about which directories you include helps Claude provide more focused and relevant responses without being overwhelmed by irrelevant code or configuration files.
+</Tip>
+
+## Best Practices
+
+### Project Description
+
+Add a clear project description that helps Claude understand how to use the connected resources:
+
+```text
+This project contains Gocertify documentation including:
+- Internal wiki for company processes and knowledge
+- External product documentation for integrations and features
+- Data documentation for BigQuery and analytics
+
+When answering questions:
+- Reference specific documentation when relevant
+- Provide links to relevant docs pages when helpful
+- Consider both internal processes and external product features
+```
+
+### Recommended Workflow
+
+<Steps>
+  <Step title="Open your Gocertify project">
+    Always start conversations within your dedicated project to ensure Claude has access to the documentation context.
+  </Step>
+  <Step title="Be specific in your questions">
+    Reference specific features, integrations, or processes by name for the most accurate responses.
+  </Step>
+  <Step title="Ask for sources">
+    Request that Claude cite specific documentation pages when providing information.
+  </Step>
+</Steps>
+
+### What to Include vs Exclude
+
+| Include | Exclude |
+|---------|---------|
+| Documentation content (`src/content`) | Configuration files |
+| Data documentation | Node modules / dependencies |
+| Process guides | Build artifacts |
+| Integration docs | Temporary files |
+
+## Web vs Desktop App
+
+<Warning>
+  The experience may differ between Claude web and the desktop/Mac app. For the most reliable GitHub integration, use the **web version** at [claude.ai](https://claude.ai).
+</Warning>
+
+On the web:
+- Add repositories directly to your project context
+- Claude automatically references connected repos when relevant
+
+On the desktop app:
+- Ensure GitHub is connected under **Settings > Connectors**
+- Add repos to your project context (not just the connector)
+- Claude should then reference the connected repositories automatically
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Claude isn't referencing my connected repos">
+    Make sure you've added the repositories to your **project context**, not just connected GitHub in settings. The connector enables access, but you need to explicitly add repos to each project.
+  </Accordion>
+  <Accordion title="Getting generic responses without documentation context">
+    Try being more specific in your questions, or explicitly ask Claude to reference the connected documentation. You can also re-add the repository to the project context.
+  </Accordion>
+  <Accordion title="Desktop app using browser instead of GitHub">
+    This is a known difference between web and desktop. For best results with GitHub integration, use the web version at claude.ai.
+  </Accordion>
+</AccordionGroup>
+
+## Related Resources
+
+<CardGroup cols={2}>
+  <Card
+    title="Claude Documentation"
+    icon="arrow-up-right-from-square"
+    href="https://docs.anthropic.com"
+  >
+    Official Claude documentation from Anthropic
+  </Card>
+  <Card
+    title="Claude Projects Guide"
+    icon="folder-open"
+    href="https://support.anthropic.com/en/articles/9517075-what-are-projects"
+  >
+    Learn more about Claude Projects and how to use them effectively
+  </Card>
+</CardGroup>
