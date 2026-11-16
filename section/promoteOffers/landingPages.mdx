@@ -42,3 +42,17 @@ Adding a campaign specific landing page is simple, we recommend getting started 
 <LandingPageSteps />
 
  
+
+## Choose the campaigns a landing page shows
+
+Go to **Promotion > Landing Pages** in your dashboard to create a landing page that shows a set of campaigns you choose, in the order you choose. Copy its **Embed code**, which includes an `identifier`:
+
+```html iFrame with identifier
+  <gocertify-iframe identifier="i-abc123"></gocertify-iframe>
+```
+
+Once a shopper enters a landing page, every link and the back button keep them inside it.
+
+### Default landing page
+
+Every brand has a **Default** landing page. It styles every step of your reward flow: your hosted page, iFrame, campaign pages, verification and codes. Until you save it, it uses your current brand settings (title, description, custom CSS and iFrame parent CSS). After you save it, it owns them, and edits to those settings elsewhere no longer apply to your reward flow. The code `<gocertify-iframe></gocertify-iframe>` with no attributes shows the Default landing page.
