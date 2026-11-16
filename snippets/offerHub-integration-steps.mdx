@@ -2,16 +2,16 @@
   <Step title="Add a new page on-site">
     Create a new page on your site to host your OfferHub, most brands use `company.com/offers` or `company.com/discounts`.
   </Step>
-  <Step title="Add OfferHub iFrame to body">
-    <Tip>
-      Your Gocertify account manager can provide you with the relevant iFrame code for each campaign.
-    </Tip>
+  <Step title="Add the OfferHub code to the body">
+    Make sure the Gocertify script is installed on the page, then paste the following code within the `<body>` tag. This determines where your OfferHub will appear.
 
-    Once you have your basic page setup you can paste in the following iFrame within the `<body>` tag. This determines where Gocertify OfferHub will appear.
-
-    ```html iFrame
+    ```html OfferHub
       <gocertify-hub></gocertify-hub>
     ```
+
+    <Info>
+      OfferHub is part of your page, not an iFrame, so you can style it with CSS on your own site.
+    </Info>
   </Step>
 
 </Steps>
